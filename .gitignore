@@ -1,0 +1,7 @@
+*.pkl
+*.csv
+*.parquet
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.idea/
