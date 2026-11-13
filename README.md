@@ -12,7 +12,7 @@
 | Оформление основной работы КТвД | [Интерактивный сайт APPSTAT](https://eviavsis.github.io/APPSTAT-site/) | [Главная HTML-страница](https://github.com/SanechkaTuoKe/APPSTAT-LABWORK/blob/main/docs/index.html) |
 | Дополнительное задание КТвД | [Запустить в браузере](https://marimo.app/?src=https%3A%2F%2Fraw.githubusercontent.com%2FSanechkaTuoKe%2FAPPSTAT-LABWORK%2Fmain%2F%25D0%2594%25D0%25BE%25D0%25BF%25D0%25BE%25D0%25BB%25D0%25BD%25D0%25B8%25D1%2582%25D0%25B5%25D0%25BB%25D1%258C%25D0%25BD%25D0%25BE%25D0%25B5%2520%25D0%25B7%25D0%25B0%25D0%25B4%25D0%25B0%25D0%25BD%25D0%25B8%25D0%25B5%2520%25D0%259A%25D0%25A2%25D0%25B2%25D0%2594%2Fdigits_marimo.py) | [Исходник marimo](https://github.com/SanechkaTuoKe/APPSTAT-LABWORK/blob/main/%D0%94%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%9A%D0%A2%D0%B2%D0%94/digits_marimo.py) · [HTML-просмотр](https://github.com/SanechkaTuoKe/APPSTAT-LABWORK/blob/main/%D0%94%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%9A%D0%A2%D0%B2%D0%94/digits_marimo_preview.html) |
 
-Для знакомства с результатами откройте сайт; для проверки и повторения расчётов — Colab.
+
 
 ## 1. Основная часть — дефекты полупроводниковых пластин
 
@@ -30,7 +30,6 @@
 
 **Где искать итог:** выводы первого спринта — **01.5**, генератор — **02.1**, таблицы критериев `cat_mark_table` — **01.6** и **02.2**.
 
-**Повторный запуск:** в Colab выполните ячейки по порядку. [Таблица данных](https://github.com/SanechkaTuoKe/APPSTAT-LABWORK/blob/main/notebooks/wm811k_features.parquet) загружается автоматически из репозитория. [Расчёт признаков](https://github.com/SanechkaTuoKe/APPSTAT-LABWORK/blob/main/src/features.py) хранится отдельно.
 
 ## 2. Часть дизайнеров — представление основной работы
 
@@ -39,7 +38,7 @@
 - [Генератор на сайте](https://eviavsis.github.io/APPSTAT-site/generator.html): изменение seed и параметров, сравнение графиков и метрик, проверка одного случайного числа. [HTML-файл](https://github.com/SanechkaTuoKe/APPSTAT-LABWORK/blob/main/docs/generator.html).
 - [Выводы и критерии первого спринта](https://eviavsis.github.io/APPSTAT-site/results.html). [HTML-файл](https://github.com/SanechkaTuoKe/APPSTAT-LABWORK/blob/main/docs/results.html).
 
-HTML-файлы на GitHub показывают исходный код; для просмотра используйте ссылки на сайт.
+
 
 ## 3. Дополнительное задание КТвД — рукописные цифры
 
@@ -49,7 +48,7 @@ HTML-файлы на GitHub показывают исходный код; для
 
 В marimo можно выбрать цифру и порог обработки, проверить измерения на изображении, изменить seed и размер выборки генератора ширины. **Генератор и автопроверки — раздел 6, итог — 7, критерии и источники — 8.**
 
-[Инструкция и описание файлов](https://github.com/SanechkaTuoKe/APPSTAT-LABWORK/blob/main/%D0%94%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%9A%D0%A2%D0%B2%D0%94/README.md). Интерактивная версия запускается по ссылке в начале README; при первом открытии дождитесь загрузки библиотек. HTML-просмотр нужно скачать и открыть в браузере — он показывает сохранённые результаты без пересчёта.
+
 
 ## Список литературы
 
