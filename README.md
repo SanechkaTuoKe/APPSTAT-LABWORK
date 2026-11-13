@@ -4,6 +4,9 @@
 
 **[Открыть интерактивный сайт APPSTAT](https://eviavsis.github.io/APPSTAT-site/)**
 
+**[Открыть лабораторную в Colab](https://colab.research.google.com/github/SanechkaTuoKe/APPSTAT-LABWORK/blob/main/notebooks/APPSTAT_Lab01_KTvD.ipynb)**
+
+
 Навигация: 
 
 Q|A
