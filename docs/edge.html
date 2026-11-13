@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="#050816" name="theme-color"/><meta content="Статистический анализ дефектов полупроводниковых пластин — APPSTAT" name="description"/><title>01.2. Дефекты у края пластины — APPSTAT</title><link href="assets/style.css" rel="stylesheet"/></head><body data-page="edge"><div class="noise"></div><header class="site-header"><a aria-label="LAB 01 | APPSTAT" class="brand" href="index.html">APPSTAT<span>✦</span></a>
+<div aria-label="Текущий раздел" class="breadcrumbs"><a href="index.html">LAB 01 | APPSTAT</a><span class="crumb-sep">/</span><span class="crumb-current">01.2. Дефекты у края пластины</span></div>
+<div class="header-actions"><a class="header-home" href="index.html">← Главная</a><button aria-controls="drawer" aria-expanded="false" class="menu-toggle" type="button"><span class="menu-caption">Содержание</span><span aria-hidden="true" class="menu-bars">☰</span></button></div></header><div class="mobile-mask" hidden=""></div><aside aria-hidden="true" aria-label="Содержание" class="drawer" id="drawer"><div class="drawer-head"><strong>Содержание</strong><button aria-label="Закрыть меню" class="drawer-close" type="button">×</button></div><nav aria-label="Содержание" class="drawer-body"><a class="nav-root" href="index.html">LAB 01 | APPSTAT</a><a class="nav-group-link" href="index.html#sprint1">01. Первый спринт. Исследование случайных величин</a><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="data.html">01.0. Данные исследования</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="center.html">01.1. Дефекты в центре пластины</a><button aria-controls="sub-center" aria-expanded="false" aria-label="Подразделы: 01.1. Дефекты в центре пластины" class="nav-expand" type="button"><span aria-hidden="true">⌄</span></button></div><div class="nav-children" hidden="" id="sub-center"><a href="center.html#heading-9">01.1.1. Описание случайной величины</a><a href="center.html#heading-10">01.1.2. Распределение числа дефектов</a><a href="center.html#heading-21">01.1.3. Состоятельность среднего и сравнение выборок</a><a href="center.html#heading-24">01.1.4. Выводы</a></div></div><div class="drawer-chapter active"><div class="drawer-page-row"><a aria-current="page" class="nav-page active" href="edge.html">01.2. Дефекты у края пластины</a><button aria-controls="sub-edge" aria-expanded="true" aria-label="Подразделы: 01.2. Дефекты у края пластины" class="nav-expand" type="button"><span aria-hidden="true">⌄</span></button></div><div class="nav-children" id="sub-edge"><a href="edge.html#heading-26">01.2.1. Как определили краевую зону</a><a href="edge.html#heading-29">01.2.2. Случайность: разброс внутри лотов</a><a href="edge.html#heading-33">01.2.3. Распределение числа дефектов</a><a href="edge.html#heading-35">01.2.4. Описательные статистики</a><a href="edge.html#heading-38">01.2.5. Подгонка распределений</a><a href="edge.html#heading-43">01.2.6. Сравнение моделей с данными</a><a href="edge.html#heading-47">01.2.7. Нормализация</a><a href="edge.html#heading-51">01.2.8. Формулы распределений</a><a href="edge.html#heading-52">01.2.9. Проверка оценок на выборках</a><a href="edge.html#heading-54">01.2.10. Состоятельность оценок</a><a href="edge.html#heading-57">01.2.11. Выборки с возвращением и без</a><a href="edge.html#heading-64">01.2.12. Проверка гипотез</a><a href="edge.html#heading-70">01.2.13. Сводная таблица</a><a href="edge.html#heading-72">01.2.14. Выводы</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="dependence.html">01.3. Связь числа дефектов в центре и у края</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="rdef.html">01.4. Смещение центра дефектов</a><button aria-controls="sub-rdef" aria-expanded="false" aria-label="Подразделы: 01.4. Смещение центра дефектов" class="nav-expand" type="button"><span aria-hidden="true">⌄</span></button></div><div class="nav-children" hidden="" id="sub-rdef"><a href="rdef.html#heading-85">01.4.1. Что измеряем</a><a href="rdef.html#heading-89">01.4.2. Разброс внутри партий</a><a href="rdef.html#heading-94">01.4.3. Распределение смещения</a><a href="rdef.html#heading-96">01.4.4. Описательные статистики</a><a href="rdef.html#heading-99">01.4.5. Сравнение трёх моделей</a><a href="rdef.html#heading-106">01.4.6. Модель равномерных дефектов</a><a href="rdef.html#heading-110">01.4.7. Модели распределения</a><a href="rdef.html#heading-112">01.4.8. Преобразования шкалы</a><a href="rdef.html#heading-116">01.4.9. Проверка оценок на выборках</a><a href="rdef.html#heading-118">01.4.10. Состоятельность оценок</a><a href="rdef.html#heading-121">01.4.11. Выборки с возвращением и без</a><a href="rdef.html#heading-126">01.4.12. Проверка гипотез</a><a href="rdef.html#heading-130">01.4.13. Сводная таблица результатов</a><a href="rdef.html#heading-132">01.4.14. Выводы</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="results.html#heading-134">01.5. Выводы первого спринта</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="results.html#heading-137">01.6. cat_mark_table</a></div></div><a class="nav-group-link" href="generator.html#heading-139">02. Второй спринт. Генератор случайных чисел</a><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="generator.html#heading-140">02.1. Генератор смещения центра дефектов</a><button aria-controls="sub-generator" aria-expanded="false" aria-label="Подразделы: 02.1. Генератор смещения центра дефектов" class="nav-expand" type="button"><span aria-hidden="true">⌄</span></button></div><div class="nav-children" hidden="" id="sub-generator"><a href="generator.html#heading-141">02.1.1. Как получаем случайное смещение</a><a href="generator.html#heading-142">02.1.2. Сравнение с реальными пластинами</a><a href="generator.html#heading-145">02.1.3. Проверка одного числа на графике</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="generator.html#heading-149">02.2. cat_mark_table</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="sources.html#heading-151">Источники</a></div></div></nav></aside><main id="main"><div class="page-hero"><p class="eyebrow">LAB 01 / APPSTAT</p><h1 class="title-page" id="heading-25">01.2. Дефекты у края пластины</h1><div class="hero-orbit"></div></div><div class="article-layout"><aside class="section-index"><p>На этой странице</p><div id="local-index"></div></aside><details class="section-index-mobile"><summary>На этой странице <span aria-hidden="true">⌄</span></summary><nav aria-label="На этой странице" id="local-index-mobile"></nav></details><article class="article-body">
+<section class="cell prose-cell" id="cell-26"><h2 class="level-subsection toc-heading" id="heading-26">01.2.1. Как определили краевую зону</h2>
+<p>Каждая пластина в датасете — это матрица, где каждая клетка соответствует позиции на сетке:</p>
+<ul>
+<li>0 — позиция вне пластины (чипа нет)</li>
+<li>1 — годный чип</li>
+<li>2 — дефектный чип</li>
+</ul>
+<p>Для каждой пластины делим расстояние от чипа до центра <span class="math">\((i_c,j_c)\)</span> на максимальное расстояние от центра до чипа:</p>
+<p class="math-display"><span class="math">\[r_{ij}=\frac{\sqrt{(i-i_c)^2+(j-j_c)^2}}{\max d}\]</span></p>
+<p>Тогда <span class="math">\(r\in[0,1]\)</span>: 0 — центр пластины, 1 — самый дальний от центра чип.</p>
+<p>n_edge — число дефектных чипов у края, где край — это чипы с <span class="math">\(r &gt; 0.8\)</span>.</p>
+<p><strong>Какие пластины вошли в анализ</strong></p>
+<p>WM-811K, Wu et al. 2015. 811 457 карт пластин с реального производства. Эксперты разметили около 20% карт по 9 классам: 8 типов паттернов брака и класс none (паттерна нет).</p>
+<p>Для работы данные отфильтрованы:</p>
+<ul>
+<li>класс none — в разметке не выделен один из восьми типов рисунка дефектов;</li>
+<li>dieSize = 516 (самое частое значение) — dieSize это число чипов на пластине, поэтому у всех оставшихся пластин одинаковая сетка и счётчики дефектов можно сравнивать напрямую.</li>
+</ul>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Показатель</th>
+<th>Значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Пластин после фильтра</td>
+<td>15881</td>
+</tr>
+<tr>
+<td>Лотов</td>
+<td>715</td>
+</tr>
+<tr>
+<td>Пластин на лот в среднем</td>
+<td>≈ 22</td>
+</tr>
+<tr>
+<td>Чипов на пластине</td>
+<td>516</td>
+</tr>
+<tr>
+<td>Чипов в краевой зоне (r &gt; 0.8)</td>
+<td>186 (оценка по площади)</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section class="cell code-cell" id="cell-27"><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from scipy import stats, optimize
+import statsmodels.api as sm
+
+# константы
+SEED = 42
+N_REP = 100        # повторов на размер выборки (состоятельность)
+N_SAMPLE = 1000    # размер выборки с возвращением / без
+N_MC = 500         # повторов Монте-Карло для sd среднего
+B_BOOT = 300       # повторов параметрического бутстрапа
+R_CENTER = 0.5     # пороги зон из src/features.py
+R_EDGE = 0.8
+
+rng = np.random.default_rng(SEED)</code></pre></details></section>
+<section class="cell code-cell" id="cell-28"><pre class="output-text">df.shape = (15881, 11)
+n = 15881
+dieSize = 516.0 | уникальных dieSize: 1
+failureType: ['none']
+число лотов = 715</pre><pre class="output-text">count    15881.000000
+mean        41.869719
+std          7.803173
+min         16.000000
+25%         36.000000
+50%         41.000000
+75%         47.000000
+max         79.000000
+Name: n_edge, dtype: float64</pre><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+x = df["n_edge"]
+print("df.shape =", df.shape)
+print("n =", len(x))
+print("dieSize =", df["dieSize"].iloc[0], "| уникальных dieSize:", df["dieSize"].nunique())
+print("failureType:", df["failureType"].unique().tolist())
+print("число лотов =", df["lotName"].nunique())
+x.describe()</code></pre></details></section>
+<section class="cell prose-cell" id="cell-29"><h2 class="level-subsection toc-heading" id="heading-29">01.2.2. Случайность: разброс внутри лотов</h2>
+<p>Край определяем одинаково на всех пластинах, а число дефектов у края меняется даже внутри одной партии. Посмотрим на этот разброс, прежде чем подбирать модель.</p>
+</section>
+<section class="cell code-cell" id="cell-30"><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>count</th>
+<th>min</th>
+<th>max</th>
+<th>mean</th>
+<th>std</th>
+</tr>
+<tr>
+<th>lotName</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>lot42869</th>
+<td>23</td>
+<td>34</td>
+<td>60</td>
+<td>45.347826</td>
+<td>7.003951</td>
+</tr>
+<tr>
+<th>lot42870</th>
+<td>25</td>
+<td>32</td>
+<td>61</td>
+<td>45.360000</td>
+<td>7.088018</td>
+</tr>
+<tr>
+<th>lot42871</th>
+<td>21</td>
+<td>32</td>
+<td>52</td>
+<td>44.095238</td>
+<td>5.494586</td>
+</tr>
+<tr>
+<th>lot42872</th>
+<td>23</td>
+<td>30</td>
+<td>53</td>
+<td>42.565217</td>
+<td>5.883923</td>
+</tr>
+<tr>
+<th>lot42873</th>
+<td>21</td>
+<td>35</td>
+<td>57</td>
+<td>45.571429</td>
+<td>6.376295</td>
+</tr>
+<tr>
+<th>lot42874</th>
+<td>24</td>
+<td>27</td>
+<td>58</td>
+<td>45.250000</td>
+<td>7.825543</td>
+</tr>
+<tr>
+<th>lot42875</th>
+<td>23</td>
+<td>31</td>
+<td>59</td>
+<td>44.173913</td>
+<td>5.843817</td>
+</tr>
+<tr>
+<th>lot42876</th>
+<td>23</td>
+<td>29</td>
+<td>62</td>
+<td>44.913043</td>
+<td>7.627183</td>
+</tr>
+<tr>
+<th>lot42877</th>
+<td>25</td>
+<td>31</td>
+<td>65</td>
+<td>43.880000</td>
+<td>7.584634</td>
+</tr>
+<tr>
+<th>lot42878</th>
+<td>24</td>
+<td>25</td>
+<td>62</td>
+<td>43.666667</td>
+<td>8.947512</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+by_lot = df.groupby("lotName")["n_edge"].agg(["count", "min", "max", "mean", "std"])
+by_lot[by_lot["count"] &gt;= 10].head(10)</code></pre></details></section>
+<section class="cell code-cell" id="cell-31"><pre class="output-text">дисперсия всей выборки      60.8895
+внутрилотовая компонента    53.4556
+межлотовая компонента        9.7931
+ICC                          0.1548
+dtype: float64</pre><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# разложение дисперсии: внутри лотов и между лотами
+g = df.groupby("lotName")["n_edge"]
+var_within = (g.var(ddof=1).fillna(0) * (g.size() - 1)).sum() / (len(df) - g.ngroups)
+var_between = g.mean().var(ddof=1)
+icc = var_between / (var_between + var_within)
+pd.Series({"дисперсия всей выборки": x.var(ddof=1),
+           "внутрилотовая компонента": var_within,
+           "межлотовая компонента": var_between,
+           "ICC": icc}).round(4)</code></pre></details></section>
+<section class="cell code-cell" id="cell-32"><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-32-0.png"><img alt="График исследования" loading="lazy" src="assets/charts/chart-32-0.png"/><span class="expand-label">↗</span></button><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# n_edge по 20 самым крупным лотам
+top = df["lotName"].value_counts().head(20).index
+data = [df.loc[df["lotName"] == lot, "n_edge"].values for lot in top]
+fig, ax = plt.subplots(figsize=(11, 4))
+bp = ax.boxplot(data, patch_artist=True)
+for box in bp['boxes']:
+    box.set(facecolor=SPACE_COLORS["cyan"], edgecolor=SPACE_COLORS["soft"], alpha=0.55)
+for med in bp['medians']:
+    med.set(color=SPACE_COLORS["magenta"], linewidth=1.6)
+for w in bp['whiskers'] + bp['caps']:
+    w.set(color=SPACE_COLORS["edge"])
+ax.set_xticks(range(1, len(top) + 1), top, rotation=90)
+ax.set_xlabel("лот (lotName)")
+ax.set_ylabel("n_edge, число дефектных чипов")
+ax.set_title("n_edge внутри лотов (20 самых крупных лотов)")
+style_axis(ax)
+plt.tight_layout()
+plt.show()
+</code></pre></details></section>
+<section class="cell prose-cell" id="cell-33"><h2 class="level-subsection toc-heading" id="heading-33">01.2.3. Распределение числа дефектов</h2>
+</section>
+<section class="cell code-cell" id="cell-34"><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-34-0.png" type="button"><img alt="График исследования" loading="lazy" src="assets/charts/chart-34-0.png"/><span class="expand-label">↗</span></button><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+fig, ax = plt.subplots(figsize=(9, 4))
+ax.hist(x, bins=np.arange(x.max() + 2) - 0.5, density=True,
+        color=SPACE_COLORS["cyan"], edgecolor=SPACE_COLORS["soft"], linewidth=0.3)
+ax.set_xlim(x.min() - 2, x.max() + 2)
+ax.set_xlabel("n_edge, число дефектных чипов")
+ax.set_ylabel("доля пластин")
+ax.set_title("Распределение n_edge")
+style_axis(ax)
+plt.show()
+</code></pre></details></section>
+<section class="cell prose-cell" id="cell-35"><h2 class="level-subsection toc-heading" id="heading-35">01.2.4. Описательные статистики</h2>
+</section>
+<section class="cell code-cell" id="cell-36"><pre class="output-text">доля нулей n_center: 0.0</pre><pre class="output-text">n                                15881.0000
+среднее                             41.8697
+дисперсия (ddof=1)                  60.8895
+ст. отклонение                       7.8032
+медиана                             41.0000
+q05                                 30.0000
+q25                                 36.0000
+q50                                 41.0000
+q75                                 47.0000
+q95                                 55.0000
+min                                 16.0000
+max                                 79.0000
+асимметрия                           0.3144
+эксцесс (избыточный)                 0.1074
+доля нулей                           0.0000
+индекс дисперсии D = var/mean        1.4543
+dtype: float64</pre><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+desc = pd.Series({
+    "n": len(x),
+    "среднее": x.mean(),
+    "дисперсия (ddof=1)": x.var(ddof=1),
+    "ст. отклонение": x.std(ddof=1),
+    "медиана": x.median(),
+    "q05": x.quantile(0.05),
+    "q25": x.quantile(0.25),
+    "q50": x.quantile(0.50),
+    "q75": x.quantile(0.75),
+    "q95": x.quantile(0.95),
+    "min": x.min(),
+    "max": x.max(),
+    "асимметрия": stats.skew(x),
+    "эксцесс (избыточный)": stats.kurtosis(x),
+    "доля нулей": (x == 0).mean(),
+    "индекс дисперсии D = var/mean": x.var(ddof=1) / x.mean(),
+})
+print("доля нулей n_center:", (df["n_center"] == 0).mean())
+desc.round(4)</code></pre></details></section>
+<section class="cell prose-cell" id="cell-37"><p>По сводным данным в краевой зоне в среднем 41,87 дефектного чипа на пластину, стандартное отклонение — 7,80 чипа. Дальше сравниваем модели, чтобы оценить, какая из них лучше описывает форму распределения.</p>
+</section>
+<section class="cell prose-cell" id="cell-38"><h2 class="level-subsection toc-heading" id="heading-38">01.2.5. Подгонка распределений</h2>
+</section>
+<section class="cell code-cell" id="cell-39"><pre class="output-text">сходимость ОБР: True | дискр. нормальное: True
+метод моментов ОБР: n = 92.1710, p = 0.687634
+ММП ОБР:            n = 93.0071, p = 0.689571
+ОБР: среднее = 41.8697, дисперсия = 60.7185
+Пуассон: lambda = 41.8697
+дискр. нормальное: mu = 41.8697, sigma = 7.7976</pre><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+xv = x.to_numpy()
+N = len(xv)
+m, v = xv.mean(), xv.var(ddof=1)
+
+# Пуассон: ММП lambda = среднее
+lam_hat = m
+ll_pois = stats.poisson.logpmf(xv, lam_hat).sum()
+
+# ОБР: старт по методу моментов, затем ММП (exp для n, логит для p)
+n_mm, p_mm = m**2 / (v - m), m / v
+
+def nll_nb(t, data):
+    n_, p_ = np.exp(t[0]), 1 / (1 + np.exp(-t[1]))
+    return -stats.nbinom.logpmf(data, n_, p_).sum()
+
+def fit_nbinom(data, start):
+    res = optimize.minimize(nll_nb, start, args=(data,), method="Nelder-Mead",
+                            options={"xatol": 1e-8, "fatol": 1e-8, "maxiter": 5000})
+    return np.exp(res.x[0]), 1 / (1 + np.exp(-res.x[1])), res
+
+start_nb = [np.log(n_mm), np.log(p_mm / (1 - p_mm))]
+n_hat, p_hat, res_nb = fit_nbinom(xv, start_nb)
+ll_nb = -res_nb.fun
+
+# дискретизированное нормальное: P(k) = Phi(k+0.5) - Phi(k-0.5), ММП
+def norm_pmf(k, mu, sd):
+    return stats.norm.cdf(k + 0.5, mu, sd) - stats.norm.cdf(k - 0.5, mu, sd)
+
+def fit_dnorm(data):
+    res = optimize.minimize(lambda t: -np.log(norm_pmf(data, t[0], np.exp(t[1]))).sum(),
+                            [data.mean(), np.log(data.std(ddof=1))], method="Nelder-Mead")
+    return res.x[0], np.exp(res.x[1]), res
+
+mu_hat, sd_hat, res_dn = fit_dnorm(xv)
+ll_dn = -res_dn.fun
+
+print("сходимость ОБР:", res_nb.success, "| дискр. нормальное:", res_dn.success)
+print(f"метод моментов ОБР: n = {n_mm:.4f}, p = {p_mm:.6f}")
+print(f"ММП ОБР:            n = {n_hat:.4f}, p = {p_hat:.6f}")
+print(f"ОБР: среднее = {stats.nbinom.mean(n_hat, p_hat):.4f}, дисперсия = {stats.nbinom.var(n_hat, p_hat):.4f}")
+print(f"Пуассон: lambda = {lam_hat:.4f}")
+print(f"дискр. нормальное: mu = {mu_hat:.4f}, sigma = {sd_hat:.4f}")</code></pre></details></section>
+<section class="cell code-cell" id="cell-40"><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>параметры</th>
+<th>число параметров</th>
+<th>logL</th>
+<th>AIC</th>
+<th>dAIC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Пуассон</th>
+<td>lambda=41.870</td>
+<td>1</td>
+<td>-55660.854062</td>
+<td>111323.708124</td>
+<td>1250.440298</td>
+</tr>
+<tr>
+<th>ОБР</th>
+<td>n=93.007, p=0.6896</td>
+<td>2</td>
+<td>-55034.633913</td>
+<td>110073.267826</td>
+<td>0.000000</td>
+</tr>
+<tr>
+<th>дискр. нормальное</th>
+<td>mu=41.870, sigma=7.798</td>
+<td>2</td>
+<td>-55161.661385</td>
+<td>110327.322769</td>
+<td>254.054943</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+models = {
+    "Пуассон": {"k": 1, "ll": ll_pois, "params": f"lambda={lam_hat:.3f}",
+                "pmf": lambda k: stats.poisson.pmf(k, lam_hat)},
+    "ОБР": {"k": 2, "ll": ll_nb, "params": f"n={n_hat:.3f}, p={p_hat:.4f}",
+            "pmf": lambda k: stats.nbinom.pmf(k, n_hat, p_hat)},
+    "дискр. нормальное": {"k": 2, "ll": ll_dn, "params": f"mu={mu_hat:.3f}, sigma={sd_hat:.3f}",
+                          "pmf": lambda k: norm_pmf(k, mu_hat, sd_hat)},
+}
+aic_table = pd.DataFrame({
+    name: {"параметры": d["params"], "число параметров": d["k"],
+           "logL": d["ll"], "AIC": 2 * d["k"] - 2 * d["ll"]}
+    for name, d in models.items()
+}).T
+aic_table["dAIC"] = aic_table["AIC"].astype(float) - aic_table["AIC"].astype(float).min()
+aic_table</code></pre></details></section>
+<section class="cell code-cell" id="cell-41"><pre class="output-text">LR = 1252.4403, p-value = 1.224e-274</pre><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# LR-тест Пуассон против ОБР (граничная гипотеза: p-value из chi2(1) делим пополам)
+lr = 2 * (ll_nb - ll_pois)
+p_lr = 0.5 * stats.chi2.sf(lr, df=1)
+print(f"LR = {lr:.4f}, p-value = {p_lr:.3e}")</code></pre></details></section>
+<section class="cell code-cell" id="cell-42"><pre class="output-text">наблюдаемая             0.000000e+00
+Пуассон exp(-lambda)    6.549562e-19
+ОБР p^n                 9.697971e-16
+дискр. нормальное       2.859985e-08
+dtype: float64</pre><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# доля нулей: наблюдаемая и по моделям
+pd.Series({
+    "наблюдаемая": (xv == 0).mean(),
+    "Пуассон exp(-lambda)": np.exp(-lam_hat),
+    "ОБР p^n": p_hat**n_hat,
+    "дискр. нормальное": norm_pmf(0, mu_hat, sd_hat),
+})</code></pre></details></section>
+<section class="cell prose-cell" id="cell-43"><h2 class="level-subsection toc-heading" id="heading-43">01.2.6. Сравнение моделей с данными</h2>
+</section>
+<section class="cell code-cell" id="cell-44"><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-44-0.png"><img alt="График исследования" loading="lazy" src="assets/charts/chart-44-0.png"/><span class="expand-label">↗</span></button><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+ks = np.arange(xv.min() - 5, xv.max() + 6)
+obs_freq = np.array([(xv == k).sum() for k in ks]) / N
+
+fig, ax = plt.subplots(figsize=(11, 4.5))
+ax.bar(ks, obs_freq, width=0.9, color=SPACE_COLORS["cyan"], edgecolor=SPACE_COLORS["soft"], linewidth=0.3, alpha=0.45, label="данные")
+for (name, d), mk in zip(models.items(), ["o", "s", "^"]):
+    ax.plot(ks, d["pmf"](ks), mk + "-", ms=4, lw=1.6, label=name)
+ax.set_xlabel("n_edge, число дефектных чипов")
+ax.set_ylabel("доля пластин")
+ax.set_title("Наблюдаемые и ожидаемые частоты n_edge")
+ax.legend()
+style_axis(ax)
+plt.show()
+</code></pre></details></section>
+<section class="cell code-cell" id="cell-45"><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-45-0.png"><img alt="График исследования" loading="lazy" src="assets/charts/chart-45-0.png"/><span class="expand-label">↗</span></button><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# PP-plot ступенчатых CDF в точках k
+emp_cdf = np.array([(xv &lt;= k).mean() for k in ks])
+fig, ax = plt.subplots(figsize=(5.5, 5.5))
+for (name, d), mk in zip(models.items(), ["o", "s", "^"]):
+    ax.plot(np.cumsum(d["pmf"](np.arange(0, ks.max() + 1)))[ks], emp_cdf, mk, ms=4, label=name)
+ax.plot([0, 1], [0, 1], linestyle="--", linewidth=1.6, color=SPACE_COLORS["magenta"], label="идеал")
+ax.set_xlabel("теоретическая F(k), доля")
+ax.set_ylabel("эмпирическая F(k), доля")
+ax.set_title("PP-plot n_edge")
+ax.legend()
+style_axis(ax)
+plt.show()
+</code></pre></details></section>
+<section class="cell code-cell" id="cell-46"><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-46-0.png"><img alt="График исследования" loading="lazy" src="assets/charts/chart-46-0.png"/><span class="expand-label">↗</span></button><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+fig, axes = plt.subplots(1, 2, figsize=(11, 4.5))
+stats.probplot(xv, dist=stats.nbinom, sparams=(n_hat, p_hat), plot=axes[0])
+style_probplot(axes[0])
+axes[0].set_title("QQ-plot n_edge против ОБР")
+axes[0].set_xlabel("теоретические квантили ОБР, чипов")
+axes[0].set_ylabel("выборочные квантили n_edge, чипов")
+stats.probplot(xv, dist=stats.poisson, sparams=(lam_hat,), plot=axes[1])
+style_probplot(axes[1])
+axes[1].set_title("QQ-plot n_edge против Пуассона")
+axes[1].set_xlabel("теоретические квантили Пуассона, чипов")
+axes[1].set_ylabel("выборочные квантили n_edge, чипов")
+plt.tight_layout()
+plt.show()
+</code></pre></details></section>
+<section class="cell prose-cell" id="cell-47"><h2 class="level-subsection toc-heading" id="heading-47">01.2.7. Нормализация</h2>
+</section>
+<section class="cell code-cell" id="cell-48"><pre class="output-text">Бокс-Кокс на x+1: lambda = 0.4152</pre><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>асимметрия</th>
+<th>эксцесс (избыточный)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>исходные</th>
+<td>0.3144</td>
+<td>0.1074</td>
+</tr>
+<tr>
+<th>z-score</th>
+<td>0.3144</td>
+<td>0.1074</td>
+</tr>
+<tr>
+<th>log1p</th>
+<td>-0.2303</td>
+<td>0.0906</td>
+</tr>
+<tr>
+<th>Бокс-Кокс(x+1)</th>
+<td>-0.0007</td>
+<td>-0.0278</td>
+</tr>
+<tr>
+<th>Анскомб 2*sqrt(x+3/8)</th>
+<td>0.0412</td>
+<td>-0.0285</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+x_bc, lam_bc = stats.boxcox(xv + 1)
+print(f"Бокс-Кокс на x+1: lambda = {lam_bc:.4f}")
+
+transforms = {
+    "исходные": xv.astype(float),
+    "z-score": (xv - xv.mean()) / xv.std(ddof=1),
+    "log1p": np.log1p(xv),
+    "Бокс-Кокс(x+1)": x_bc,
+    "Анскомб 2*sqrt(x+3/8)": 2 * np.sqrt(xv + 3 / 8),
+}
+pd.DataFrame({name: {"асимметрия": stats.skew(t), "эксцесс (избыточный)": stats.kurtosis(t)}
+              for name, t in transforms.items()}).T.round(4)</code></pre></details></section>
+<section class="cell code-cell" id="cell-49"><div aria-label="Графики" class="chart-viewer"><div aria-label="Преобразования шкалы" class="chart-tabs" role="tablist"><button aria-selected="true" data-image="assets/charts/chart-49-0-view-1.png" id="view-tab-chart-49-0-0" role="tab" tabindex="0" type="button">исходные</button><button aria-selected="false" data-image="assets/charts/chart-49-0-view-2.png" id="view-tab-chart-49-0-1" role="tab" tabindex="-1" type="button">z-score</button><button aria-selected="false" data-image="assets/charts/chart-49-0-view-3.png" id="view-tab-chart-49-0-2" role="tab" tabindex="-1" type="button">log1p</button><button aria-selected="false" data-image="assets/charts/chart-49-0-view-4.png" id="view-tab-chart-49-0-3" role="tab" tabindex="-1" type="button">Бокс-Кокс(x+1)</button><button aria-selected="false" data-image="assets/charts/chart-49-0-view-5.png" id="view-tab-chart-49-0-4" role="tab" tabindex="-1" type="button">Анскомб 2*sqrt(x+3/8)</button></div><button aria-label="Увеличить график" class="chart-expand chart-expand-tabbed" data-img="assets/charts/chart-49-0-view-1.png" type="button"><img alt="График исследования" loading="lazy" src="assets/charts/chart-49-0-view-1.png"/><span class="expand-label">↗</span></button></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+fig, axes = plt.subplots(len(transforms), 2, figsize=(12.6, 3.9 * len(transforms)))
+hist_colors = [SPACE_COLORS["cyan"], SPACE_COLORS["teal"], SPACE_COLORS["violet"], SPACE_COLORS["magenta"], SPACE_COLORS["gold"]]
+qq_colors = [SPACE_COLORS["violet"], SPACE_COLORS["magenta"], SPACE_COLORS["cyan"], SPACE_COLORS["gold"], SPACE_COLORS["mint"]]
+for j, (name, t) in enumerate(transforms.items()):
+    hax, qax = axes[j, 0], axes[j, 1]
+    hax.hist(t, bins=50, density=True, color=hist_colors[j % len(hist_colors)], edgecolor=SPACE_COLORS["soft"], linewidth=0.35)
+    hax.set_title(name)
+    hax.set_xlabel("Число дефектных чипов" if name == "исходные" else "преобразованная шкала (безразмерная)")
+    hax.set_ylabel("плотность")
+    style_axis(hax)
+    stats.probplot(t, dist="norm", plot=qax)
+    style_probplot(qax, point_color=qq_colors[j % len(qq_colors)], line_color=SPACE_COLORS["magenta"])
+    qax.set_title(f"QQ-plot: {name}")
+    qax.set_xlabel("квантили N(0,1)")
+    qax.set_ylabel("выборочные квантили, число дефектных чипов" if name == "исходные" else "выборочные квантили (безразмерные)")
+plt.tight_layout()
+plt.show()
+</code></pre></details></section>
+<section class="cell prose-cell" id="cell-50"><p>После преобразования шкала меняется. Поэтому по этим графикам сравниваем форму распределений, а число чипов читаем по графику в исходной шкале.</p>
+</section>
+<section class="cell prose-cell" id="cell-51"><h2 class="level-subsection toc-heading" id="heading-51">01.2.8. Формулы распределений</h2>
+<p>Для Пуассона <span class="math">\(P(X=k)=e^{-\lambda}\lambda^k/k!\)</span> и <span class="math">\(E(X)=\operatorname{Var}(X)=\lambda\)</span>. Отрицательное биномиальное распределение допускает дисперсию выше среднего. Третья модель округляет нормальную величину: <span class="math">\(P(X=k)=\Phi((k+0.5-\mu)/\sigma)-\Phi((k-0.5-\mu)/\sigma)\)</span>.</p>
+</section>
+<section class="cell prose-cell" id="cell-52"><h2 class="level-subsection toc-heading" id="heading-52">01.2.9. Проверка оценок на выборках</h2>
+</section>
+<section class="cell code-cell" id="cell-53"><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th>оценка</th>
+<th>дисперсия</th>
+<th>медиана</th>
+<th>среднее</th>
+</tr>
+<tr>
+<th>n</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>10</th>
+<td>80.525</td>
+<td>10.050</td>
+<td>7.630</td>
+</tr>
+<tr>
+<th>16</th>
+<td>70.078</td>
+<td>8.500</td>
+<td>6.566</td>
+</tr>
+<tr>
+<th>28</th>
+<td>55.469</td>
+<td>6.025</td>
+<td>4.895</td>
+</tr>
+<tr>
+<th>48</th>
+<td>42.583</td>
+<td>4.550</td>
+<td>4.223</td>
+</tr>
+<tr>
+<th>82</th>
+<td>29.627</td>
+<td>3.500</td>
+<td>3.204</td>
+</tr>
+<tr>
+<th>139</th>
+<td>23.498</td>
+<td>3.000</td>
+<td>2.262</td>
+</tr>
+<tr>
+<th>235</th>
+<td>16.760</td>
+<td>3.000</td>
+<td>1.709</td>
+</tr>
+<tr>
+<th>398</th>
+<td>13.925</td>
+<td>1.000</td>
+<td>1.276</td>
+</tr>
+<tr>
+<th>674</th>
+<td>10.225</td>
+<td>1.000</td>
+<td>0.983</td>
+</tr>
+<tr>
+<th>1142</th>
+<td>9.878</td>
+<td>1.000</td>
+<td>0.698</td>
+</tr>
+<tr>
+<th>1933</th>
+<td>6.149</td>
+<td>1.000</td>
+<td>0.586</td>
+</tr>
+<tr>
+<th>3273</th>
+<td>5.203</td>
+<td>1.000</td>
+<td>0.473</td>
+</tr>
+<tr>
+<th>5541</th>
+<td>3.420</td>
+<td>1.000</td>
+<td>0.309</td>
+</tr>
+<tr>
+<th>9380</th>
+<td>3.414</td>
+<td>1.000</td>
+<td>0.240</td>
+</tr>
+<tr>
+<th>15881</th>
+<td>2.398</td>
+<td>1.000</td>
+<td>0.234</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# выборки с возвращением из всей совокупности, N_REP повторов на каждый размер
+sizes = np.unique(np.logspace(1, np.log10(N), 15).astype(int))
+true_vals = {"среднее": xv.mean(), "дисперсия": xv.var(ddof=1), "медиана": np.median(xv)}
+
+rows = []
+for n in sizes:
+    est = np.array([[s.mean(), s.var(ddof=1), np.median(s)]
+                    for s in (rng.choice(xv, n, replace=True) for _ in range(N_REP))])
+    for j, name in enumerate(true_vals):
+        q05, q50, q95 = np.quantile(est[:, j], [0.05, 0.5, 0.95])
+        rows.append({"n": n, "оценка": name, "q05": q05, "медиана": q50, "q95": q95})
+cons = pd.DataFrame(rows)
+cons["ширина 5-95%"] = cons["q95"] - cons["q05"]
+cons.pivot(index="n", columns="оценка", values="ширина 5-95%").round(3)</code></pre></details></section>
+<section class="cell prose-cell" id="cell-54"><h2 class="level-subsection toc-heading" id="heading-54">01.2.10. Состоятельность оценок</h2>
+</section>
+<section class="cell code-cell" id="cell-55"><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-55-0.png" type="button"><img alt="График исследования" loading="lazy" src="assets/charts/chart-55-0.png"/><span class="expand-label">↗</span></button><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+units = {"среднее": "чипов", "дисперсия": "чипов²", "медиана": "чипов"}
+fig, axes = plt.subplots(1, 3, figsize=(16, 4.5))
+for ax, name in zip(axes, true_vals):
+    c = cons[cons["оценка"] == name]
+    ax.fill_between(c["n"], c["q05"], c["q95"], alpha=0.3, label="5-95% оценок")
+    ax.semilogx(c["n"], c["медиана"], "o-", ms=3, label="медиана оценок")
+    ax.axhline(true_vals[name], color=SPACE_COLORS["gold"], ls="--", lw=1.5, label="генеральное значение")
+    ax.set_xlabel("размер выборки n")
+    ax.set_ylabel(f"{name}, {units[name]}")
+    ax.set_title(f"Состоятельность: {name}")
+    ax.legend()
+plt.tight_layout()
+plt.show()</code></pre></details></section>
+<section class="cell code-cell" id="cell-56"><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-56-0.png"><img alt="График исследования" loading="lazy" src="assets/charts/chart-56-0.png"/><span class="expand-label">↗</span></button><pre class="output-text">среднее     -0.5058
+дисперсия   -0.4869
+медиана     -0.3456
+Name: наклон, dtype: float64</pre><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# ширина полосы 5-95% против n в log-log, наклон по np.polyfit
+fig, ax = plt.subplots(figsize=(7, 5))
+slopes = {}
+for name in true_vals:
+    c = cons[(cons["оценка"] == name) &amp; (cons["ширина 5-95%"] &gt; 0)]
+    slopes[name] = np.polyfit(np.log10(c["n"]), np.log10(c["ширина 5-95%"]), 1)[0]
+    ax.loglog(c["n"], c["ширина 5-95%"], "o-", ms=3, label=f"{name}, наклон {slopes[name]:.3f}")
+ax.set_xlabel("размер выборки n")
+ax.set_ylabel("ширина полосы 5-95%, ед. оценки")
+ax.set_title("Скорость сужения разброса оценок")
+ax.legend()
+plt.show()
+pd.Series(slopes, name="наклон").round(4)</code></pre></details></section>
+<section class="cell prose-cell" id="cell-57"><h2 class="level-subsection toc-heading" id="heading-57">01.2.11. Выборки с возвращением и без</h2>
+</section>
+<section class="cell code-cell" id="cell-58"><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>генеральная</th>
+<th>с возвращением</th>
+<th>без возвращения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>n</th>
+<td>15881.00</td>
+<td>1000.000</td>
+<td>1000.000</td>
+</tr>
+<tr>
+<th>среднее</th>
+<td>41.87</td>
+<td>42.244</td>
+<td>41.986</td>
+</tr>
+<tr>
+<th>дисперсия</th>
+<td>60.89</td>
+<td>63.490</td>
+<td>56.680</td>
+</tr>
+<tr>
+<th>q05</th>
+<td>30.00</td>
+<td>30.000</td>
+<td>30.000</td>
+</tr>
+<tr>
+<th>q25</th>
+<td>36.00</td>
+<td>37.000</td>
+<td>37.000</td>
+</tr>
+<tr>
+<th>медиана</th>
+<td>41.00</td>
+<td>42.000</td>
+<td>42.000</td>
+</tr>
+<tr>
+<th>q75</th>
+<td>47.00</td>
+<td>47.000</td>
+<td>47.000</td>
+</tr>
+<tr>
+<th>q95</th>
+<td>55.00</td>
+<td>56.000</td>
+<td>56.000</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+s_with = x.sample(N_SAMPLE, replace=True, random_state=SEED)
+s_without = x.sample(N_SAMPLE, replace=False, random_state=SEED)
+
+def summary(s):
+    return pd.Series({"n": len(s), "среднее": s.mean(), "дисперсия": s.var(ddof=1),
+                      "q05": s.quantile(0.05), "q25": s.quantile(0.25), "медиана": s.median(),
+                      "q75": s.quantile(0.75), "q95": s.quantile(0.95)})
+
+pd.DataFrame({"генеральная": summary(x), "с возвращением": summary(s_with),
+              "без возвращения": summary(s_without)}).round(3)</code></pre></details></section>
+<section class="cell code-cell" id="cell-59"><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-59-0.png"><img alt="График исследования" loading="lazy" src="assets/charts/chart-59-0.png"/><span class="expand-label">↗</span></button><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+bins = np.arange(x.min(), x.max() + 2) - 0.5
+fig, ax = plt.subplots(figsize=(10, 4.5))
+ax.hist(x, bins=bins, density=True, histtype="stepfilled", alpha=0.22, color=SPACE_COLORS["cyan"], label="генеральная")
+ax.hist(s_with, bins=bins, density=True, histtype="step", lw=1.5, color=SPACE_COLORS["violet"], label="с возвращением")
+ax.hist(s_without, bins=bins, density=True, histtype="step", lw=1.5, color=SPACE_COLORS["magenta"], label="без возвращения")
+ax.set_xlabel("n_edge, число дефектных чипов")
+ax.set_ylabel("доля пластин")
+ax.set_title(f"Выборки n = {N_SAMPLE} и генеральная совокупность")
+ax.legend()
+style_axis(ax)
+plt.show()
+</code></pre></details></section>
+<section class="cell prose-cell" id="cell-60"><p><strong>Сравнение распределений полного набора и выборок.</strong> В полном наборе у края в среднем 41,87 дефекта. В двух выборках по 1000 пластин получилось 42,24 и 41,99. Средние близки, хотя разброс отдельных значений различается. Чтобы понять, типично ли это, дальше повторяем отбор много раз.</p>
+</section>
+<section class="cell code-cell" id="cell-61"><pre class="output-text">без возвращения vs дополнение: chi2 = 8.737, df = 9, p = 0.4619, min E = 71.5
+с возвращением vs генеральная: chi2 = 10.599, df = 9, p = 0.3042
+KS с возвращением vs генеральная: D = 0.0336, p = 0.2334
+KS без возвращения vs дополнение: D = 0.0243, p = 0.6283</pre><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# группы по децилям генеральной совокупности (группы 0/1/2/3+ не подходят: min(n_edge) &gt; 0)
+edges = np.unique(np.quantile(x, np.linspace(0, 1, 11)))
+edges[0], edges[-1] = -np.inf, np.inf
+grp = lambda s: pd.cut(s, edges)
+
+# без возвращения: выборка против дополнения, chi2 однородности
+complement = x.drop(s_without.index)
+tab = pd.crosstab(np.r_[np.zeros(len(s_without)), np.ones(len(complement))],
+                  np.r_[grp(s_without).astype(str), grp(complement).astype(str)])
+chi2_h, p_h, dof_h, E_h = stats.chi2_contingency(tab)
+print(f"без возвращения vs дополнение: chi2 = {chi2_h:.3f}, df = {dof_h}, p = {p_h:.4f}, min E = {E_h.min():.1f}")
+
+# с возвращением: chi2 согласия с долями генеральной совокупности
+p_pop = grp(x).value_counts(normalize=True).sort_index()
+o_w = grp(s_with).value_counts().sort_index()
+chi2_w, p_w = stats.chisquare(o_w.values, p_pop.values * len(s_with))
+print(f"с возвращением vs генеральная: chi2 = {chi2_w:.3f}, df = {len(o_w) - 1}, p = {p_w:.4f}")
+
+for name, s, ref in [("с возвращением vs генеральная", s_with, x),
+                     ("без возвращения vs дополнение", s_without, complement)]:
+    r = stats.ks_2samp(s, ref)
+    print(f"KS {name}: D = {r.statistic:.4f}, p = {r.pvalue:.4f}")</code></pre></details></section>
+<section class="cell code-cell" id="cell-62"><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-62-0.png" type="button"><img alt="График исследования" loading="lazy" src="assets/charts/chart-62-0.png"/><span class="expand-label">↗</span></button><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>n</th>
+<th>n/N</th>
+<th>sd с возвр.</th>
+<th>sd без возвр.</th>
+<th>теория sigma/sqrt(n)</th>
+<th>теория с FPC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>100</td>
+<td>0.0063</td>
+<td>0.7505</td>
+<td>0.7709</td>
+<td>0.7803</td>
+<td>0.7779</td>
+</tr>
+<tr>
+<th>1</th>
+<td>500</td>
+<td>0.0315</td>
+<td>0.3447</td>
+<td>0.3443</td>
+<td>0.3490</td>
+<td>0.3434</td>
+</tr>
+<tr>
+<th>2</th>
+<td>1000</td>
+<td>0.0630</td>
+<td>0.2535</td>
+<td>0.2294</td>
+<td>0.2468</td>
+<td>0.2389</td>
+</tr>
+<tr>
+<th>3</th>
+<td>3000</td>
+<td>0.1889</td>
+<td>0.1438</td>
+<td>0.1288</td>
+<td>0.1425</td>
+<td>0.1283</td>
+</tr>
+<tr>
+<th>4</th>
+<td>6000</td>
+<td>0.3778</td>
+<td>0.1009</td>
+<td>0.0785</td>
+<td>0.1007</td>
+<td>0.0795</td>
+</tr>
+<tr>
+<th>5</th>
+<td>10000</td>
+<td>0.6297</td>
+<td>0.0799</td>
+<td>0.0476</td>
+<td>0.0780</td>
+<td>0.0475</td>
+</tr>
+<tr>
+<th>6</th>
+<td>13000</td>
+<td>0.8186</td>
+<td>0.0699</td>
+<td>0.0291</td>
+<td>0.0684</td>
+<td>0.0291</td>
+</tr>
+<tr>
+<th>7</th>
+<td>15000</td>
+<td>0.9445</td>
+<td>0.0654</td>
+<td>0.0147</td>
+<td>0.0637</td>
+<td>0.0150</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# Монте-Карло: sd выборочного среднего с возвращением и без против теории
+sigma = xv.std(ddof=0)
+n_grid = np.array([100, 500, 1000, 3000, 6000, 10000, 13000, 15000])
+mc = []
+for n in n_grid:
+    m_with = [rng.choice(xv, n, replace=True).mean() for _ in range(N_MC)]
+    m_without = [rng.choice(xv, n, replace=False).mean() for _ in range(N_MC)]
+    mc.append({"n": n, "n/N": n / N, "sd с возвр.": np.std(m_with, ddof=1),
+               "sd без возвр.": np.std(m_without, ddof=1),
+               "теория sigma/sqrt(n)": sigma / np.sqrt(n),
+               "теория с FPC": sigma / np.sqrt(n) * np.sqrt((N - n) / (N - 1))})
+mc = pd.DataFrame(mc)
+
+fig, ax = plt.subplots(figsize=(8, 5))
+ax.loglog(mc["n"], mc["sd с возвр."], "o", label="эмпирически, с возвращением")
+ax.loglog(mc["n"], mc["sd без возвр."], "s", label="эмпирически, без возвращения")
+nn = np.linspace(n_grid.min(), n_grid.max(), 400)
+ax.loglog(nn, sigma / np.sqrt(nn), "-", lw=1.6, color=SPACE_COLORS["gold"], label=r"$\sigma/\sqrt{n}$")
+ax.loglog(nn, sigma / np.sqrt(nn) * np.sqrt((N - nn) / (N - 1)), "--", lw=1.6, color=SPACE_COLORS["gold"],
+          label=r"$\sigma/\sqrt{n}\cdot\sqrt{(N-n)/(N-1)}$")
+ax.set_xlabel("размер выборки n")
+ax.set_ylabel("sd выборочного среднего, чипов")
+ax.set_title(f"Выборки с возвращением и без (N = {N})")
+ax.legend()
+plt.show()
+mc.round(4)</code></pre></details></section>
+<section class="cell prose-cell" id="cell-63"><p><strong>Различия между способами отбора.</strong> При малой выборке кривые близки. Когда берём почти весь набор, без возвращения одни и те же пластины не повторяются, поэтому среднее меняется от выборки к выборке гораздо меньше. Например, для 15 000 пластин теоретический разброс среднего — около 0,015 чипа без возвращения и 0,064 с возвращением.</p>
+</section>
+<section class="cell prose-cell" id="cell-64"><h2 class="level-subsection toc-heading" id="heading-64">01.2.12. Проверка гипотез</h2>
+</section>
+<section class="cell code-cell" id="cell-65"><pre class="output-text">модель для chi2: ОБР
+chi2 = 46.377, df = 49, p = 5.801e-01, бинов = 52</pre><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>бин</th>
+<th>O</th>
+<th>E</th>
+<th>(O-E)^2/E</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>&lt;=19</td>
+<td>3</td>
+<td>8.44</td>
+<td>3.505</td>
+</tr>
+<tr>
+<th>1</th>
+<td>20</td>
+<td>4</td>
+<td>6.95</td>
+<td>1.252</td>
+</tr>
+<tr>
+<th>2</th>
+<td>21</td>
+<td>9</td>
+<td>11.61</td>
+<td>0.587</td>
+</tr>
+<tr>
+<th>3</th>
+<td>22</td>
+<td>10</td>
+<td>18.68</td>
+<td>4.031</td>
+</tr>
+<tr>
+<th>4</th>
+<td>23</td>
+<td>29</td>
+<td>28.99</td>
+<td>0.000</td>
+</tr>
+<tr>
+<th>5</th>
+<td>24</td>
+<td>46</td>
+<td>43.50</td>
+<td>0.144</td>
+</tr>
+<tr>
+<th>6</th>
+<td>25</td>
+<td>51</td>
+<td>63.20</td>
+<td>2.356</td>
+</tr>
+<tr>
+<th>7</th>
+<td>26</td>
+<td>88</td>
+<td>89.05</td>
+<td>0.012</td>
+</tr>
+<tr>
+<th>8</th>
+<td>27</td>
+<td>110</td>
+<td>121.84</td>
+<td>1.151</td>
+</tr>
+<tr>
+<th>9</th>
+<td>28</td>
+<td>178</td>
+<td>162.11</td>
+<td>1.557</td>
+</tr>
+<tr>
+<th>10</th>
+<td>29</td>
+<td>200</td>
+<td>209.99</td>
+<td>0.475</td>
+</tr>
+<tr>
+<th>11</th>
+<td>30</td>
+<td>270</td>
+<td>265.11</td>
+<td>0.090</td>
+</tr>
+<tr>
+<th>12</th>
+<td>31</td>
+<td>319</td>
+<td>326.55</td>
+<td>0.175</td>
+</tr>
+<tr>
+<th>13</th>
+<td>32</td>
+<td>404</td>
+<td>392.84</td>
+<td>0.317</td>
+</tr>
+<tr>
+<th>14</th>
+<td>33</td>
+<td>468</td>
+<td>461.95</td>
+<td>0.079</td>
+</tr>
+<tr>
+<th>15</th>
+<td>34</td>
+<td>537</td>
+<td>531.46</td>
+<td>0.058</td>
+</tr>
+<tr>
+<th>16</th>
+<td>35</td>
+<td>642</td>
+<td>598.68</td>
+<td>3.134</td>
+</tr>
+<tr>
+<th>17</th>
+<td>36</td>
+<td>687</td>
+<td>660.83</td>
+<td>1.036</td>
+</tr>
+<tr>
+<th>18</th>
+<td>37</td>
+<td>736</td>
+<td>715.26</td>
+<td>0.601</td>
+</tr>
+<tr>
+<th>19</th>
+<td>38</td>
+<td>732</td>
+<td>759.65</td>
+<td>1.006</td>
+</tr>
+<tr>
+<th>20</th>
+<td>39</td>
+<td>841</td>
+<td>792.14</td>
+<td>3.013</td>
+</tr>
+<tr>
+<th>21</th>
+<td>40</td>
+<td>795</td>
+<td>811.53</td>
+<td>0.337</td>
+</tr>
+<tr>
+<th>22</th>
+<td>41</td>
+<td>791</td>
+<td>817.26</td>
+<td>0.844</td>
+</tr>
+<tr>
+<th>23</th>
+<td>42</td>
+<td>809</td>
+<td>809.47</td>
+<td>0.000</td>
+</tr>
+<tr>
+<th>24</th>
+<td>43</td>
+<td>812</td>
+<td>788.95</td>
+<td>0.673</td>
+</tr>
+<tr>
+<th>25</th>
+<td>44</td>
+<td>777</td>
+<td>757.05</td>
+<td>0.526</td>
+</tr>
+<tr>
+<th>26</th>
+<td>45</td>
+<td>675</td>
+<td>715.51</td>
+<td>2.294</td>
+</tr>
+<tr>
+<th>27</th>
+<td>46</td>
+<td>670</td>
+<td>666.38</td>
+<td>0.020</td>
+</tr>
+<tr>
+<th>28</th>
+<td>47</td>
+<td>595</td>
+<td>611.82</td>
+<td>0.462</td>
+</tr>
+<tr>
+<th>29</th>
+<td>48</td>
+<td>540</td>
+<td>553.98</td>
+<td>0.353</td>
+</tr>
+<tr>
+<th>30</th>
+<td>49</td>
+<td>489</td>
+<td>494.88</td>
+<td>0.070</td>
+</tr>
+<tr>
+<th>31</th>
+<td>50</td>
+<td>404</td>
+<td>436.32</td>
+<td>2.394</td>
+</tr>
+<tr>
+<th>32</th>
+<td>51</td>
+<td>352</td>
+<td>379.80</td>
+<td>2.035</td>
+</tr>
+<tr>
+<th>33</th>
+<td>52</td>
+<td>304</td>
+<td>326.51</td>
+<td>1.552</td>
+</tr>
+<tr>
+<th>34</th>
+<td>53</td>
+<td>296</td>
+<td>277.32</td>
+<td>1.259</td>
+</tr>
+<tr>
+<th>35</th>
+<td>54</td>
+<td>232</td>
+<td>232.77</td>
+<td>0.003</td>
+</tr>
+<tr>
+<th>36</th>
+<td>55</td>
+<td>191</td>
+<td>193.13</td>
+<td>0.024</td>
+</tr>
+<tr>
+<th>37</th>
+<td>56</td>
+<td>166</td>
+<td>158.46</td>
+<td>0.359</td>
+</tr>
+<tr>
+<th>38</th>
+<td>57</td>
+<td>137</td>
+<td>128.59</td>
+<td>0.550</td>
+</tr>
+<tr>
+<th>39</th>
+<td>58</td>
+<td>112</td>
+<td>103.24</td>
+<td>0.743</td>
+</tr>
+<tr>
+<th>40</th>
+<td>59</td>
+<td>79</td>
+<td>82.03</td>
+<td>0.112</td>
+</tr>
+<tr>
+<th>41</th>
+<td>60</td>
+<td>67</td>
+<td>64.51</td>
+<td>0.096</td>
+</tr>
+<tr>
+<th>42</th>
+<td>61</td>
+<td>50</td>
+<td>50.23</td>
+<td>0.001</td>
+</tr>
+<tr>
+<th>43</th>
+<td>62</td>
+<td>40</td>
+<td>38.73</td>
+<td>0.041</td>
+</tr>
+<tr>
+<th>44</th>
+<td>63</td>
+<td>36</td>
+<td>29.58</td>
+<td>1.391</td>
+</tr>
+<tr>
+<th>45</th>
+<td>64</td>
+<td>30</td>
+<td>22.39</td>
+<td>2.589</td>
+</tr>
+<tr>
+<th>46</th>
+<td>65</td>
+<td>16</td>
+<td>16.79</td>
+<td>0.037</td>
+</tr>
+<tr>
+<th>47</th>
+<td>66</td>
+<td>13</td>
+<td>12.48</td>
+<td>0.022</td>
+</tr>
+<tr>
+<th>48</th>
+<td>67</td>
+<td>13</td>
+<td>9.19</td>
+<td>1.579</td>
+</tr>
+<tr>
+<th>49</th>
+<td>68</td>
+<td>8</td>
+<td>6.71</td>
+<td>0.246</td>
+</tr>
+<tr>
+<th>50</th>
+<td>69-70</td>
+<td>7</td>
+<td>8.36</td>
+<td>0.220</td>
+</tr>
+<tr>
+<th>51</th>
+<td>&gt;=71</td>
+<td>11</td>
+<td>8.19</td>
+<td>0.966</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# лучшая модель по AIC; chi2 согласия с объединением хвостов (все E &gt;= 5)
+best = aic_table["AIC"].astype(float).idxmin()
+print("модель для chi2:", best)
+
+def bin_expected(pmf, n_obs, kmax):
+    """Ожидаемые по k=0..kmax (последний бин: &gt;= kmax), объединение соседних до E &gt;= 5."""
+    k = np.arange(kmax + 1)
+    p = pmf(k[:-1])
+    probs = np.append(p, 1 - p.sum())
+    E = n_obs * probs
+    groups, cur, acc = [], [], 0.0
+    for i, e in enumerate(E):
+        cur.append(i)
+        acc += e
+        if acc &gt;= 5:
+            groups.append(cur)
+            cur, acc = [], 0.0
+    if cur:
+        groups[-1] += cur
+    return groups, np.array([E[g].sum() for g in groups])
+
+def chi2_gof(data, pmf, n_params):
+    kmax = int(data.max()) + 1
+    groups, E = bin_expected(pmf, len(data), kmax)
+    counts = np.bincount(np.minimum(data, kmax), minlength=kmax + 1)
+    O = np.array([counts[g].sum() for g in groups])
+    stat, p = stats.chisquare(O, E, ddof=n_params)
+    return stat, p, len(groups) - 1 - n_params, groups, O, E
+
+chi2_obs, p_chi2, df_chi2, groups, O, E = chi2_gof(xv, models[best]["pmf"], models[best]["k"])
+labels = [f"&lt;={g[-1]}" if i == 0 else (f"&gt;={g[0]}" if i == len(groups) - 1 else
+          (str(g[0]) if len(g) == 1 else f"{g[0]}-{g[-1]}")) for i, g in enumerate(groups)]
+print(f"chi2 = {chi2_obs:.3f}, df = {df_chi2}, p = {p_chi2:.3e}, бинов = {len(groups)}")
+pd.DataFrame({"бин": labels, "O": O, "E": E.round(2), "(O-E)^2/E": ((O - E) ** 2 / E).round(3)})</code></pre></details></section>
+<section class="cell code-cell" id="cell-66"><pre class="output-text">бутстрап: B = 300, p = 0.5581, медиана chi2* = 48.47</pre><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-66-1.png"><img alt="График исследования" loading="lazy" src="assets/charts/chart-66-1.png"/><span class="expand-label">↗</span></button><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# параметрический бутстрап p-value для chi2: генерация из подогнанной модели, переоценка, chi2
+def refit(data):
+    if best == "Пуассон":
+        lam = data.mean()
+        return lambda k: stats.poisson.pmf(k, lam)
+    if best == "ОБР":
+        n_, p_, _ = fit_nbinom(data, [np.log(n_hat), np.log(p_hat / (1 - p_hat))])
+        return lambda k: stats.nbinom.pmf(k, n_, p_)
+    mu_, sd_, _ = fit_dnorm(data)
+    return lambda k: norm_pmf(k, mu_, sd_)
+
+def simulate(n):
+    if best == "Пуассон":
+        return rng.poisson(lam_hat, n)
+    if best == "ОБР":
+        return stats.nbinom.rvs(n_hat, p_hat, size=n, random_state=rng)
+    return np.clip(np.round(rng.normal(mu_hat, sd_hat, n)), 0, None).astype(int)
+
+chi2_boot = np.empty(B_BOOT)
+for b in range(B_BOOT):
+    xb = simulate(N)
+    chi2_boot[b] = chi2_gof(xb, refit(xb), models[best]["k"])[0]
+p_boot = (1 + np.sum(chi2_boot &gt;= chi2_obs)) / (B_BOOT + 1)
+print(f"бутстрап: B = {B_BOOT}, p = {p_boot:.4f}, медиана chi2* = {np.median(chi2_boot):.2f}")
+
+fig, ax = plt.subplots(figsize=(7, 4))
+ax.hist(chi2_boot, bins=30, density=True, color=SPACE_COLORS["violet"], edgecolor=SPACE_COLORS["soft"], linewidth=0.3, alpha=0.8, label="chi2* (бутстрап)")
+ax.axvline(chi2_obs, color=SPACE_COLORS["gold"], linewidth=1.8, label="наблюдаемое chi2")
+ax.set_xlabel("статистика chi2, безразмерная")
+ax.set_ylabel("плотность вероятности")
+ax.legend()
+style_axis(ax)
+plt.show()
+</code></pre></details></section>
+<section class="cell code-cell" id="cell-67"><pre class="output-text">n Training          1.300500e+04
+n Test              2.876000e+03
+среднее Training    4.224237e+01
+среднее Test        4.018463e+01
+медиана Training    4.200000e+01
+медиана Test        4.000000e+01
+U                   2.151291e+07
+p-value             1.158789e-36
+U/(n1*n2)           5.751749e-01
+dtype: float64</pre><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# Манн-Уитни: Training против Test
+tr = df.loc[df["trianTestLabel"] == "Training", "n_edge"]
+te = df.loc[df["trianTestLabel"] == "Test", "n_edge"]
+mw = stats.mannwhitneyu(tr, te, alternative="two-sided", method="asymptotic")
+mw_effect = mw.statistic / (len(tr) * len(te))
+pd.Series({"n Training": len(tr), "n Test": len(te),
+           "среднее Training": tr.mean(), "среднее Test": te.mean(),
+           "медиана Training": tr.median(), "медиана Test": te.median(),
+           "U": mw.statistic, "p-value": mw.pvalue, "U/(n1*n2)": mw_effect})</code></pre></details></section>
+<section class="cell code-cell" id="cell-68"><pre class="output-text">доля площади центра                           2.500000e-01
+доля площади края                             3.600000e-01
+средняя плотность центр                       1.780217e-01
+средняя плотность край                        2.253968e-01
+медиана разности (край - центр)               4.715762e-02
+доля пластин, где край &gt; центра               8.180215e-01
+Wilcoxon W                                    1.321294e+07
+Wilcoxon p                                    0.000000e+00
+binomtest: доля краевых среди (край+центр)    6.457936e-01
+binomtest: ожидаемая доля                     5.901639e-01
+binomtest p                                   0.000000e+00
+dtype: float64</pre><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# центр против края по плотностям дефектов
+# допущение: числа чипов в зонах в данных нет, чипов в зоне ~ доля площади диска * n_die
+frac_c = R_CENTER**2               # r &lt; 0.5
+frac_e = 1 - R_EDGE**2             # r &gt; 0.8
+rho_c = df["n_center"] / (frac_c * df["n_die"])
+rho_e = df["n_edge"] / (frac_e * df["n_die"])
+diff = rho_e - rho_c
+
+wx = stats.wilcoxon(diff, alternative="two-sided")
+sum_c, sum_e = int(df["n_center"].sum()), int(df["n_edge"].sum())
+bt = stats.binomtest(sum_e, sum_e + sum_c, p=frac_e / (frac_e + frac_c))
+
+pd.Series({"доля площади центра": frac_c, "доля площади края": frac_e,
+           "средняя плотность центр": rho_c.mean(), "средняя плотность край": rho_e.mean(),
+           "медиана разности (край - центр)": diff.median(),
+           "доля пластин, где край &gt; центра": (diff &gt; 0).mean(),
+           "Wilcoxon W": wx.statistic, "Wilcoxon p": wx.pvalue,
+           "binomtest: доля краевых среди (край+центр)": sum_e / (sum_e + sum_c),
+           "binomtest: ожидаемая доля": frac_e / (frac_e + frac_c),
+           "binomtest p": bt.pvalue})</code></pre></details></section>
+<section class="cell code-cell" id="cell-69"><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-69-0.png"><img alt="График исследования" loading="lazy" src="assets/charts/chart-69-0.png"/><span class="expand-label">↗</span></button><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+fig, ax = plt.subplots(figsize=(8, 4))
+ax.hist(rho_c, bins=50, density=True, alpha=0.48, color=SPACE_COLORS["cyan"], label="центр, r &lt; 0.5")
+ax.hist(rho_e, bins=50, density=True, alpha=0.45, color=SPACE_COLORS["violet"], label="край, r &gt; 0.8")
+ax.set_xlabel("плотность дефектов, доля дефектных чипов в зоне")
+ax.set_ylabel("плотность вероятности")
+ax.set_title("Плотность дефектов в центре и у края")
+ax.legend()
+style_axis(ax)
+plt.show()
+</code></pre></details></section>
+<section class="cell prose-cell" id="cell-70"><h2 class="level-subsection toc-heading" id="heading-70">01.2.13. Сводная таблица</h2>
+</section>
+<section class="cell code-cell" id="cell-71"><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>пластин (n)</th>
+<td>15881</td>
+</tr>
+<tr>
+<th>лотов</th>
+<td>715</td>
+</tr>
+<tr>
+<th>dieSize</th>
+<td>516</td>
+</tr>
+<tr>
+<th>среднее n_edge</th>
+<td>41.8697</td>
+</tr>
+<tr>
+<th>дисперсия n_edge</th>
+<td>60.8895</td>
+</tr>
+<tr>
+<th>индекс дисперсии D</th>
+<td>1.45426</td>
+</tr>
+<tr>
+<th>доля нулей</th>
+<td>0</td>
+</tr>
+<tr>
+<th>асимметрия</th>
+<td>0.31441</td>
+</tr>
+<tr>
+<th>эксцесс</th>
+<td>0.107374</td>
+</tr>
+<tr>
+<th>внутрилотовая дисперсия</th>
+<td>53.4556</td>
+</tr>
+<tr>
+<th>межлотовая дисперсия</th>
+<td>9.79307</td>
+</tr>
+<tr>
+<th>ICC</th>
+<td>0.154834</td>
+</tr>
+<tr>
+<th>Пуассон lambda</th>
+<td>41.8697</td>
+</tr>
+<tr>
+<th>ОБР n</th>
+<td>93.0071</td>
+</tr>
+<tr>
+<th>ОБР p</th>
+<td>0.689571</td>
+</tr>
+<tr>
+<th>дискр. нормальное mu</th>
+<td>41.8697</td>
+</tr>
+<tr>
+<th>дискр. нормальное sigma</th>
+<td>7.79761</td>
+</tr>
+<tr>
+<th>AIC Пуассон</th>
+<td>111324</td>
+</tr>
+<tr>
+<th>AIC ОБР</th>
+<td>110073</td>
+</tr>
+<tr>
+<th>AIC дискр. нормальное</th>
+<td>110327</td>
+</tr>
+<tr>
+<th>LR Пуассон vs ОБР</th>
+<td>1252.44</td>
+</tr>
+<tr>
+<th>p LR</th>
+<td>1.22386e-274</td>
+</tr>
+<tr>
+<th>Бокс-Кокс lambda</th>
+<td>0.415162</td>
+</tr>
+<tr>
+<th>chi2 согласия (ОБР)</th>
+<td>46.3774</td>
+</tr>
+<tr>
+<th>df chi2</th>
+<td>49</td>
+</tr>
+<tr>
+<th>p chi2</th>
+<td>0.580078</td>
+</tr>
+<tr>
+<th>p chi2 бутстрап</th>
+<td>0.55814</td>
+</tr>
+<tr>
+<th>Манн-Уитни p</th>
+<td>1.15879e-36</td>
+</tr>
+<tr>
+<th>Манн-Уитни U/(n1*n2)</th>
+<td>0.575175</td>
+</tr>
+<tr>
+<th>Wilcoxon p (край vs центр)</th>
+<td>0</td>
+</tr>
+<tr>
+<th>binomtest p (край vs центр)</th>
+<td>0</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+summary_tab = pd.Series({
+    "пластин (n)": N,
+    "лотов": df["lotName"].nunique(),
+    "dieSize": df["dieSize"].iloc[0],
+    "среднее n_edge": m,
+    "дисперсия n_edge": v,
+    "индекс дисперсии D": v / m,
+    "доля нулей": (xv == 0).mean(),
+    "асимметрия": stats.skew(xv),
+    "эксцесс": stats.kurtosis(xv),
+    "внутрилотовая дисперсия": var_within,
+    "межлотовая дисперсия": var_between,
+    "ICC": icc,
+    "Пуассон lambda": lam_hat,
+    "ОБР n": n_hat,
+    "ОБР p": p_hat,
+    "дискр. нормальное mu": mu_hat,
+    "дискр. нормальное sigma": sd_hat,
+    "AIC Пуассон": aic_table.loc["Пуассон", "AIC"],
+    "AIC ОБР": aic_table.loc["ОБР", "AIC"],
+    "AIC дискр. нормальное": aic_table.loc["дискр. нормальное", "AIC"],
+    "LR Пуассон vs ОБР": lr,
+    "p LR": p_lr,
+    "Бокс-Кокс lambda": lam_bc,
+    f"chi2 согласия ({best})": chi2_obs,
+    "df chi2": df_chi2,
+    "p chi2": p_chi2,
+    "p chi2 бутстрап": p_boot,
+    "Манн-Уитни p": mw.pvalue,
+    "Манн-Уитни U/(n1*n2)": mw_effect,
+    "Wilcoxon p (край vs центр)": wx.pvalue,
+    "binomtest p (край vs центр)": bt.pvalue,
+}, dtype=object)
+summary_tab.map(lambda v: f"{v:.6g}" if isinstance(v, (float, np.floating)) else v).to_frame("значение")</code></pre></details></section>
+<section class="cell prose-cell" id="cell-72"><h2 class="level-subsection toc-heading" id="heading-72">01.2.14. Выводы</h2>
+<p>У края в среднем 41,87 дефектного чипа на пластину, дисперсия — 60,89 чипа². По графикам повторных выборок разброс среднего уменьшается с ростом размера выборки. На одних и тех же размерах сравнение с возвращением и без показывает, как способ отбора меняет разброс.</p>
+<p>Среди трёх моделей наименьший AIC у отрицательной биномиальной. Для неё критерий согласия χ² дал p ≈ 0,580. На уровне 5% гипотеза согласия не отвергается.</p>
+</section>
+<section class="cell prose-cell" id="cell-73"><p><strong>Сравним центр и край.</strong> Для отрицательной биномиальной модели на краю получили <span class="math">\(p\approx0{,}580\)</span>, а в центре — <span class="math">\(p\approx0{,}012\)</span>. При пороге 5% для края оснований отвергнуть согласие нет, а для центра есть. Поэтому дальше описываем зоны отдельно.</p>
+</section></article></div><nav aria-label="Переходы между разделами" class="page-direction"><a class="step-link step-prev" href="center.html"><span class="step-meta">← Назад</span><strong>01.1. Дефекты в центре пластины</strong></a><a class="step-link step-next" href="dependence.html"><span class="step-meta">Далее →</span><strong>01.3. Связь числа дефектов в центре и у края</strong></a></nav></main><button aria-label="Наверх" class="back-to-top" type="button">↑</button><footer class="site-footer"><a class="brand" href="index.html">APPSTAT<span>✦</span></a><span>LAB 01 · WM-811K</span><a href="sources.html">Источники ↗</a></footer><div aria-label="График" aria-modal="true" class="lightbox" hidden="" role="dialog">
+<div class="lightbox-dialog"><div class="lightbox-toolbar"><span>График</span><div class="lightbox-actions">
+<button aria-label="Уменьшить график" class="zoom-out" type="button">−</button><output class="zoom-label">100%</output>
+<button aria-label="Увеличить график" class="zoom-in" type="button">+</button>
+<button aria-label="Закрыть график" class="lightbox-close" type="button">×</button></div></div>
+<div class="lightbox-viewport"><img alt="Увеличенный график"/></div></div></div><script>window.MathJax={tex:{inlineMath:[["\\(","\\)"],["$","$"]],displayMath:[["\\[","\\]"]] },options:{skipHtmlTags:["script","noscript","style","textarea","pre","code"]}};</script><script async="" src="assets/vendor/mathjax/tex-svg.js"></script><script src="assets/app.js"></script></body></html>
