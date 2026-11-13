@@ -3,7 +3,7 @@
 **Валерия Курнакова · ИСУ 466435**  
 **Ева Аблязизова · ИСУ 504459**
 
-[▶ Открыть интерактивную работу без установки Python](https://molab.marimo.io/github/SanechkaTuoKe/APPSTAT-LABWORK/blob/ktvd-digits/%D0%94%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5%20%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%9A%D0%A2%D0%B2%D0%94/digits_marimo.py/wasm)
+[▶ Открыть интерактивную работу без установки Python](https://marimo.app/?src=https%3A%2F%2Fraw.githubusercontent.com%2FSanechkaTuoKe%2FAPPSTAT-LABWORK%2Fktvd-digits%2F%25D0%2594%25D0%25BE%25D0%25BF%25D0%25BE%25D0%25BB%25D0%25BD%25D0%25B8%25D1%2582%25D0%25B5%25D0%25BB%25D1%258C%25D0%25BD%25D0%25BE%25D0%25B5%2520%25D0%25B7%25D0%25B0%25D0%25B4%25D0%25B0%25D0%25BD%25D0%25B8%25D0%25B5%2520%25D0%259A%25D0%25A2%25D0%25B2%25D0%2594%2Fdigits_marimo.py)
 
 При первом открытии дождитесь загрузки Python и библиотек в браузере. Данные `load_digits` входят в scikit-learn; загружать отдельную таблицу не требуется.
 
