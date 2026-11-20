@@ -14,7 +14,7 @@
 | Запуск и пересчёт ноутбука | [Открыть в Google Colab](https://colab.research.google.com/github/SanechkaTuoKe/APPSTAT-LABWORK/blob/main/notebooks/APPSTAT_Lab01_KTvD.ipynb) |
 | Файлы сайта | [Открыть папку docs](https://github.com/SanechkaTuoKe/APPSTAT-LABWORK/tree/main/docs) |
 
-Для знакомства с результатами начните с сайта. Расчёты, код и подробные пояснения находятся в ноутбуках.
+
 
 ## 1. Основная часть — исследование дефектов пластин
 
