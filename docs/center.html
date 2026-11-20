@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="#050816" name="theme-color"/><meta content="Статистический анализ дефектов полупроводниковых пластин — APPSTAT" name="description"/><title>01.1. Дефекты в центре пластины — APPSTAT</title><link href="assets/style.css" rel="stylesheet"/></head><body data-page="center"><div class="noise"></div><header class="site-header"><a aria-label="LAB 01 | APPSTAT" class="brand" href="index.html">APPSTAT<span>✦</span></a>
+<div aria-label="Текущий раздел" class="breadcrumbs"><a href="index.html">LAB 01 | APPSTAT</a><span class="crumb-sep">/</span><span class="crumb-current">01.1. Дефекты в центре пластины</span></div>
+<div class="header-actions"><a class="header-home" href="index.html">← Главная</a><button aria-controls="drawer" aria-expanded="false" class="menu-toggle" type="button"><span class="menu-caption">Содержание</span><span aria-hidden="true" class="menu-bars">☰</span></button></div></header><div class="mobile-mask" hidden=""></div><aside aria-hidden="true" aria-label="Содержание" class="drawer" id="drawer"><div class="drawer-head"><strong>Содержание</strong><button aria-label="Закрыть меню" class="drawer-close" type="button">×</button></div><nav aria-label="Содержание" class="drawer-body"><a class="nav-root" href="index.html">LAB 01 | APPSTAT</a><a class="nav-group-link" href="index.html#sprint1">01. Первый спринт. Исследование случайных величин</a><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="data.html">01.0. Данные исследования</a></div></div><div class="drawer-chapter active"><div class="drawer-page-row"><a aria-current="page" class="nav-page active" href="center.html">01.1. Дефекты в центре пластины</a><button aria-controls="sub-center" aria-expanded="true" aria-label="Подразделы: 01.1. Дефекты в центре пластины" class="nav-expand" type="button"><span aria-hidden="true">⌄</span></button></div><div class="nav-children" id="sub-center"><a href="center.html#heading-9">01.1.1. Описание случайной величины</a><a href="center.html#heading-10">01.1.2. Распределение числа дефектов</a><a href="center.html#heading-21">01.1.3. Состоятельность среднего и сравнение выборок</a><a href="center.html#heading-24">01.1.4. Выводы</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="edge.html">01.2. Дефекты у края пластины</a><button aria-controls="sub-edge" aria-expanded="false" aria-label="Подразделы: 01.2. Дефекты у края пластины" class="nav-expand" type="button"><span aria-hidden="true">⌄</span></button></div><div class="nav-children" hidden="" id="sub-edge"><a href="edge.html#heading-26">01.2.1. Как определили краевую зону</a><a href="edge.html#heading-29">01.2.2. Случайность: разброс внутри лотов</a><a href="edge.html#heading-33">01.2.3. Распределение числа дефектов</a><a href="edge.html#heading-35">01.2.4. Описательные статистики</a><a href="edge.html#heading-38">01.2.5. Подгонка распределений</a><a href="edge.html#heading-43">01.2.6. Сравнение моделей с данными</a><a href="edge.html#heading-47">01.2.7. Нормализация</a><a href="edge.html#heading-51">01.2.8. Формулы распределений</a><a href="edge.html#heading-52">01.2.9. Проверка оценок на выборках</a><a href="edge.html#heading-54">01.2.10. Состоятельность оценок</a><a href="edge.html#heading-57">01.2.11. Выборки с возвращением и без</a><a href="edge.html#heading-64">01.2.12. Проверка гипотез</a><a href="edge.html#heading-70">01.2.13. Сводная таблица</a><a href="edge.html#heading-72">01.2.14. Выводы</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="dependence.html">01.3. Связь числа дефектов в центре и у края</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="rdef.html">01.4. Смещение центра дефектов</a><button aria-controls="sub-rdef" aria-expanded="false" aria-label="Подразделы: 01.4. Смещение центра дефектов" class="nav-expand" type="button"><span aria-hidden="true">⌄</span></button></div><div class="nav-children" hidden="" id="sub-rdef"><a href="rdef.html#heading-85">01.4.1. Что измеряем</a><a href="rdef.html#heading-89">01.4.2. Разброс внутри партий</a><a href="rdef.html#heading-94">01.4.3. Распределение смещения</a><a href="rdef.html#heading-96">01.4.4. Описательные статистики</a><a href="rdef.html#heading-99">01.4.5. Сравнение трёх моделей</a><a href="rdef.html#heading-106">01.4.6. Модель равномерных дефектов</a><a href="rdef.html#heading-110">01.4.7. Модели распределения</a><a href="rdef.html#heading-112">01.4.8. Преобразования шкалы</a><a href="rdef.html#heading-116">01.4.9. Проверка оценок на выборках</a><a href="rdef.html#heading-118">01.4.10. Состоятельность оценок</a><a href="rdef.html#heading-121">01.4.11. Выборки с возвращением и без</a><a href="rdef.html#heading-126">01.4.12. Проверка гипотез</a><a href="rdef.html#heading-130">01.4.13. Сводная таблица результатов</a><a href="rdef.html#heading-132">01.4.14. Выводы</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="results.html#heading-134">01.5. Выводы первого спринта</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="results.html#heading-137">01.6. cat_mark_table</a></div></div><a class="nav-group-link" href="generator.html#heading-139">02. Второй спринт. Генератор случайных чисел</a><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="generator.html#heading-140">02.1. Генератор смещения центра дефектов</a><button aria-controls="sub-generator" aria-expanded="false" aria-label="Подразделы: 02.1. Генератор смещения центра дефектов" class="nav-expand" type="button"><span aria-hidden="true">⌄</span></button></div><div class="nav-children" hidden="" id="sub-generator"><a href="generator.html#heading-141">02.1.1. Как получаем случайное смещение</a><a href="generator.html#heading-142">02.1.2. Сравнение с реальными пластинами</a><a href="generator.html#heading-145">02.1.3. Проверка одного числа на графике</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="generator.html#heading-149">02.2. cat_mark_table</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="sources.html#heading-151">Источники</a></div></div></nav></aside><main id="main"><div class="page-hero"><p class="eyebrow">LAB 01 / APPSTAT</p><h1 class="title-page" id="heading-8">01.1. Дефекты в центре пластины</h1><div class="hero-orbit"></div></div><div class="article-layout"><aside class="section-index"><p>На этой странице</p><div id="local-index"></div></aside><details class="section-index-mobile"><summary>На этой странице <span aria-hidden="true">⌄</span></summary><nav aria-label="На этой странице" id="local-index-mobile"></nav></details><article class="article-body">
+<section class="cell prose-cell" id="cell-9"><h2 class="level-subsection toc-heading" id="heading-9">01.1.1. Описание случайной величины</h2>
+<p>При случайном выборе одной пластины из 15 881 наблюдений величина <code>n_center</code> определяется как число дефектных чипов в центральной зоне (<span class="math">\(r&lt;0{,}5\)</span>). Каждая пластина содержит 516 чипов. Радиус <span class="math">\(r\)</span> измеряется в долях расстояния до самого дальнего чипа.</p>
+<p>Одинаковый размер пластин не задаёт число дефектов: в центре встречается от 5 до 58. Поэтому до выбора пластины её счётчик неизвестен. Для описания распределения рассматривается модель Пуассона; соответствие модели проверяется по наблюдаемому разбросу.</p>
+</section>
+<section class="cell prose-cell" id="cell-10"><h2 class="level-subsection toc-heading" id="heading-10">01.1.2. Распределение числа дефектов</h2>
+</section>
+<section class="cell code-cell" id="cell-11"><pre class="output-text">count    15881.000000
+mean        22.964801
+std          6.116518
+min          5.000000
+25%         19.000000
+50%         23.000000
+75%         27.000000
+max         58.000000
+Name: n_center, dtype: float64
+асимметрия: 0.4436329678497521 эксцесс: 0.46088267833752194
+дисперсия/среднее: 1.6290930052602333</pre><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-11-1.png"><img alt="График исследования" loading="lazy" src="assets/charts/chart-11-1.png"/><span class="expand-label">↗</span></button><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Построение распределения n_center
+##EDA
+import matplotlib.pyplot as plt
+import numpy as np
+from scipy import stats
+
+xv = x.to_numpy()
+print(x.describe())
+print("асимметрия:", stats.skew(xv), "эксцесс:", stats.kurtosis(xv))
+print("дисперсия/среднее:", x.var(ddof=1) / x.mean())
+
+vals, cnt = np.unique(xv, return_counts=True)
+fig, ax = plt.subplots(figsize=(9.2, 5))
+ax.bar(vals, cnt / N, color=SPACE_COLORS["cyan"], edgecolor=SPACE_COLORS["soft"], linewidth=0.5)
+ax.set_xlabel("число дефектных чипов")
+ax.set_ylabel("доля пластин")
+ax.set_title("Распределение n_center")
+style_axis(ax)
+plt.show()
+</code></pre></details></section>
+<section class="cell prose-cell" id="cell-12"><p>В изученном наборе от 5 до 58 дефектных чипов в центре на пластину. Среднее — 22,96 чипа, дисперсия — 37,41 чипа². Отношение дисперсии к среднему равно 1,63. Асимметрия положительная (0,44), то есть правый хвост длиннее.</p>
+</section>
+<section class="cell code-cell" id="cell-13"><pre class="output-text">среднее z: -3.1498147848064386e-16 | std z: 1.0</pre><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-13-1.png"><img alt="График исследования" loading="lazy" src="assets/charts/chart-13-1.png"/><span class="expand-label">↗</span></button><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+z = (x - x.mean()) / x.std(ddof=1)
+fig, ax = plt.subplots(1, 2, figsize=(10, 3.5))
+ax[0].hist(z, bins=30, color=SPACE_COLORS["cyan"], edgecolor=SPACE_COLORS["soft"])
+ax[0].set_xlabel("z-оценка n_center")
+ax[0].set_ylabel("число пластин")
+style_axis(ax[0])
+ax[1].hist(x, bins=30, color=SPACE_COLORS["violet"], edgecolor=SPACE_COLORS["soft"])
+ax[1].set_xlabel("n_center, число дефектных чипов")
+ax[1].set_ylabel("число пластин")
+style_axis(ax[1])
+plt.show()
+
+print("среднее z:", z.mean(), "| std z:", z.std(ddof=1))
+</code></pre></details></section>
+<section class="cell prose-cell" id="cell-14"><p>Для стандартизации используется преобразование <span class="math">\(z = (x - \bar{x})/s\)</span>: среднее стандартизованной величины равно 0, стандартное отклонение — 1. Это убирает единицы измерения и делает величину сопоставимой с другими, а также удобно для сравнения с нормальным распределением. Форма распределения при этом не меняется: график <span class="math">\(z\)</span> повторяет гистограмму <span class="math">\(n\_center\)</span> с другой шкалой.</p>
+</section>
+<section class="cell prose-cell" id="cell-15"><p><strong>Интерпретация стандартизации.</strong> Ноль на новой шкале — это среднее число дефектов, а не пластина без дефектов. Правый хвост остался на месте. Значит, смена шкалы сама по себе не делает распределение нормальным.</p>
+</section>
+<section class="cell code-cell" id="cell-16"><pre class="output-text">var/mean = 1.629, статистика = 25870.0, p = 0</pre><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+mean, var = x.mean(), x.var(ddof=1)
+D = (N - 1) * var / mean
+p_over = stats.chi2.sf(D, N - 1)
+print(f"var/mean = {var/mean:.3f}, статистика = {D:.1f}, p = {p_over:.3g}")</code></pre></details></section>
+<section class="cell prose-cell" id="cell-17"><p>Проверка перерассеяния дала <span class="math">\(D=25870\)</span> и отношение <span class="math">\(s^2/\bar{x}=1{,}629\)</span>. Вывод программы округляет крайне малое <span class="math">\(p\)</span> до нуля. Результат указывает на перерассеяние в исследуемых данных.</p>
+</section>
+<section class="cell code-cell" id="cell-18"><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-18-0.png"><img alt="График исследования" loading="lazy" src="assets/charts/chart-18-0.png"/><span class="expand-label">↗</span></button><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+pois = stats.poisson(mean)
+p_nb = mean / var
+r_nb = mean * p_nb / (1 - p_nb)
+nb = stats.nbinom(r_nb, p_nb)
+fits = {"Пуассон": (pois, 1), "Отриц. биномиальное": (nb, 2)}
+
+kk = np.arange(0, int(xv.max()) + 1)
+emp = np.bincount(xv.astype(int), minlength=len(kk)) / N
+fig, ax = plt.subplots(figsize=(9.5, 5))
+ax.bar(kk, emp, alpha=0.5, color=SPACE_COLORS["cyan"], edgecolor=SPACE_COLORS["soft"], label="данные")
+for name, (dist, _) in fits.items():
+    ax.plot(kk, dist.pmf(kk), "o-", markersize=3.5, linewidth=1.5, label=name)
+ax.set_xlabel("n_center, число дефектных чипов")
+ax.set_ylabel("вероятность")
+ax.legend()
+style_axis(ax)
+plt.show()
+</code></pre></details></section>
+<section class="cell code-cell" id="cell-19"><pre class="output-text">Пуассон: chi2 = 3765.5, ячеек = 33, p = 0
+Отриц. биномиальное: chi2 = 62.9, ячеек = 43, p = 0.0118</pre><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+def gof_chi2(x, dist, n_params, min_exp=5):
+    xi = x.astype(int)
+    kmax = int(xi.max())
+    ks = np.arange(kmax + 1)
+    o = list(np.bincount(xi, minlength=kmax + 1).astype(float))
+    e = list(len(xi) * dist.pmf(ks))
+    e[-1] += len(xi) * dist.sf(kmax)
+    while len(e) &gt; 2 and e[-1] &lt; min_exp:
+        le, lo = e.pop(), o.pop(); e[-1] += le; o[-1] += lo
+    while len(e) &gt; 2 and e[0] &lt; min_exp:
+        fe, fo = e.pop(0), o.pop(0); e[0] += fe; o[0] += fo
+    chi2, p = stats.chisquare(o, e, ddof=n_params)
+    return chi2, p, len(o)
+
+for name, (dist, npar) in fits.items():
+    chi2, p, bins = gof_chi2(xv, dist, npar)
+    print(f"{name}: chi2 = {chi2:.1f}, ячеек = {bins}, p = {p:.3g}")</code></pre></details></section>
+<section class="cell prose-cell" id="cell-20"><h3 class="level-nested toc-heading" id="heading-20">01.1.2.1. Распределение Пуассона</h3>
+<p>Дискретная величина <span class="math">\(X\)</span> имеет распределение Пуассона с параметром <span class="math">\(\lambda&gt;0\)</span>, если</p>
+<p class="math-display"><span class="math">\[P(X=k)=\frac{\lambda^k e^{-\lambda}}{k!},\quad k=0,1,2,\dots\]</span></p>
+<p>Среднее и дисперсия равны: <span class="math">\(\mathbb{E}[X]=\operatorname{Var}(X)=\lambda\)</span>. Распределение возникает как предел биномиального при <span class="math">\(n\to\infty\)</span>, <span class="math">\(p\to 0\)</span>, <span class="math">\(np=\lambda\)</span>, то есть описывает число редких независимых событий.</p>
+<h3 class="level-nested toc-heading" id="heading-20-second">01.1.2.2. Отрицательное биномиальное распределение</h3>
+<p class="math-display"><span class="math">\[P(X=k)=\binom{k+r-1}{k}p^r(1-p)^k,\quad k=0,1,2,\dots\]</span></p>
+<p>Среднее <span class="math">\(\mu = r(1-p)/p\)</span>, дисперсия <span class="math">\(\sigma^2=\mu/p&gt;\mu\)</span>. Оно получается как смесь пуассоновских распределений, у которых интенсивность <span class="math">\(\lambda\)</span> сама случайна и распределена по гамма-закону. Поэтому подходит для данных, где дисперсия больше среднего. По методу моментов: <span class="math">\(p=\bar{x}/s^2\)</span>, <span class="math">\(r=\bar{x}p/(1-p)\)</span>.</p>
+<p>Наблюдаемая дисперсия превышает среднее, что указывает на перерассеяние по сравнению с моделью Пуассона. Результаты проверки гипотезы о согласии с распределением Пуассона приведены выше.</p>
+</section>
+<section class="cell prose-cell" id="cell-21"><h2 class="level-subsection toc-heading" id="heading-21">01.1.3. Состоятельность среднего и сравнение выборок</h2>
+</section>
+<section class="cell code-cell" id="cell-22"><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-22-0.png"><img alt="График исследования" loading="lazy" src="assets/charts/chart-22-0.png"/><span class="expand-label">↗</span></button><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>n</th>
+<th>Среднее, чипов</th>
+<th>Медиана, чипов</th>
+<th>Дисперсия, чипов²</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Весь набор</th>
+<td>15881.0</td>
+<td>22.965</td>
+<td>23.0</td>
+<td>37.412</td>
+</tr>
+<tr>
+<th>С возвращением</th>
+<td>1000.0</td>
+<td>22.886</td>
+<td>23.0</td>
+<td>42.031</td>
+</tr>
+<tr>
+<th>Без возвращения</th>
+<td>1000.0</td>
+<td>22.907</td>
+<td>22.0</td>
+<td>38.433</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Устойчивость среднего и сравнение выборок
+center_values = df["n_center"].to_numpy()
+center_rng = np.random.default_rng(42)
+sizes = [30, 100, 300, 1000, 3000]
+full_mean = center_values.mean()
+rows = []
+for size in sizes:
+    for replace, label in [(True, "С возвращением"), (False, "Без возвращения")]:
+        means = np.array([center_rng.choice(center_values, size, replace=replace).mean()
+                          for _ in range(200)])
+        lower, upper = np.quantile(means, [0.05, 0.95])
+        rows.append([size, label, means.std(ddof=1), lower, upper])
+center_check = pd.DataFrame(rows, columns=["n", "Отбор", "SD", "q05", "q95"])
+fig, axes = plt.subplots(1, 2, figsize=(11, 3.8))
+for label, group in center_check.groupby("Отбор"):
+    axes[0].plot(group["n"], group["SD"], "o-", linewidth=1.8, label=label)
+    axes[1].fill_between(group["n"].to_numpy(), group["q05"].to_numpy(),
+                         group["q95"].to_numpy(), alpha=0.18, label=label)
+axes[0].set(xscale="log", xlabel="Размер выборки, пластин", ylabel="SD среднего, чипов")
+axes[1].axhline(full_mean, linestyle="--", color=SPACE_COLORS["gold"], linewidth=1.6, label="Среднее полного набора")
+axes[1].set(xscale="log", xlabel="Размер выборки, пластин", ylabel="Среднее, чипов")
+for ax in axes:
+    ax.legend()
+    style_axis(ax)
+plt.tight_layout()
+plt.show()
+samples = {
+    "Весь набор": center_values,
+    "С возвращением": center_rng.choice(center_values, 1000, replace=True),
+    "Без возвращения": center_rng.choice(center_values, 1000, replace=False),
+}
+</code></pre></details></section>
+<section class="cell prose-cell" id="cell-23"><p><strong>Состоятельность среднего.</strong> Левый график показывает разброс средних по повторным выборкам, правый — сужение полосы вокруг среднего полного набора при увеличении объёма выборки. В двух отдельных выборках по 1000 пластин получили 22,89 и 22,91 чипа при среднем по всему набору 22,96. Это один пример, а тенденцию видно по повторным выборкам.</p>
+</section>
+<section class="cell prose-cell" id="cell-24"><h2 class="level-subsection toc-heading" id="heading-24">01.1.4. Выводы</h2>
+<p>Среднее число дефектов в центре — 22,96, дисперсия — 37,41. Разброс больше, чем предполагает модель Пуассона. По сохранённым результатам теста согласия при уровне значимости 5% гипотезу согласия отвергаем и для отрицательной биномиальной модели (<span class="math">\(p=0{,}0118\)</span>). Причину перерассеяния по этому тесту установить нельзя.</p>
+</section></article></div><nav aria-label="Переходы между разделами" class="page-direction"><a class="step-link step-prev" href="data.html"><span class="step-meta">← Назад</span><strong>01.0. Данные исследования</strong></a><a class="step-link step-next" href="edge.html"><span class="step-meta">Далее →</span><strong>01.2. Дефекты у края пластины</strong></a></nav></main><button aria-label="Наверх" class="back-to-top" type="button">↑</button><footer class="site-footer"><a class="brand" href="index.html">APPSTAT<span>✦</span></a><span>LAB 01 · WM-811K</span><a href="sources.html">Источники ↗</a></footer><div aria-label="График" aria-modal="true" class="lightbox" hidden="" role="dialog">
+<div class="lightbox-dialog"><div class="lightbox-toolbar"><span>График</span><div class="lightbox-actions">
+<button aria-label="Уменьшить график" class="zoom-out" type="button">−</button><output class="zoom-label">100%</output>
+<button aria-label="Увеличить график" class="zoom-in" type="button">+</button>
+<button aria-label="Закрыть график" class="lightbox-close" type="button">×</button></div></div>
+<div class="lightbox-viewport"><img alt="Увеличенный график"/></div></div></div><script>window.MathJax={tex:{inlineMath:[["\\(","\\)"],["$","$"]],displayMath:[["\\[","\\]"]] },options:{skipHtmlTags:["script","noscript","style","textarea","pre","code"]}};</script><script async="" src="assets/vendor/mathjax/tex-svg.js"></script><script src="assets/app.js"></script></body></html>

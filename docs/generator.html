@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="#050816" name="theme-color"/><meta content="Статистический анализ дефектов полупроводниковых пластин — APPSTAT" name="description"/><title>02.1. Генератор смещения центра дефектов — APPSTAT</title><link href="assets/style.css" rel="stylesheet"/></head><body data-page="generator"><div class="noise"></div><header class="site-header"><a aria-label="LAB 01 | APPSTAT" class="brand" href="index.html">APPSTAT<span>✦</span></a>
+<div aria-label="Текущий раздел" class="breadcrumbs"><a href="index.html">LAB 01 | APPSTAT</a><span class="crumb-sep">/</span><span class="crumb-current">02. Второй спринт. Генератор случайных чисел</span></div>
+<div class="header-actions"><a class="header-home" href="index.html">← Главная</a><button aria-controls="drawer" aria-expanded="false" class="menu-toggle" type="button"><span class="menu-caption">Содержание</span><span aria-hidden="true" class="menu-bars">☰</span></button></div></header><div class="mobile-mask" hidden=""></div><aside aria-hidden="true" aria-label="Содержание" class="drawer" id="drawer"><div class="drawer-head"><strong>Содержание</strong><button aria-label="Закрыть меню" class="drawer-close" type="button">×</button></div><nav aria-label="Содержание" class="drawer-body"><a class="nav-root" href="index.html">LAB 01 | APPSTAT</a><a class="nav-group-link" href="index.html#sprint1">01. Первый спринт. Исследование случайных величин</a><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="data.html">01.0. Данные исследования</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="center.html">01.1. Дефекты в центре пластины</a><button aria-controls="sub-center" aria-expanded="false" aria-label="Подразделы: 01.1. Дефекты в центре пластины" class="nav-expand" type="button"><span aria-hidden="true">⌄</span></button></div><div class="nav-children" hidden="" id="sub-center"><a href="center.html#heading-9">01.1.1. Описание случайной величины</a><a href="center.html#heading-10">01.1.2. Распределение числа дефектов</a><a href="center.html#heading-21">01.1.3. Состоятельность среднего и сравнение выборок</a><a href="center.html#heading-24">01.1.4. Выводы</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="edge.html">01.2. Дефекты у края пластины</a><button aria-controls="sub-edge" aria-expanded="false" aria-label="Подразделы: 01.2. Дефекты у края пластины" class="nav-expand" type="button"><span aria-hidden="true">⌄</span></button></div><div class="nav-children" hidden="" id="sub-edge"><a href="edge.html#heading-26">01.2.1. Как определили краевую зону</a><a href="edge.html#heading-29">01.2.2. Случайность: разброс внутри лотов</a><a href="edge.html#heading-33">01.2.3. Распределение числа дефектов</a><a href="edge.html#heading-35">01.2.4. Описательные статистики</a><a href="edge.html#heading-38">01.2.5. Подгонка распределений</a><a href="edge.html#heading-43">01.2.6. Сравнение моделей с данными</a><a href="edge.html#heading-47">01.2.7. Нормализация</a><a href="edge.html#heading-51">01.2.8. Формулы распределений</a><a href="edge.html#heading-52">01.2.9. Проверка оценок на выборках</a><a href="edge.html#heading-54">01.2.10. Состоятельность оценок</a><a href="edge.html#heading-57">01.2.11. Выборки с возвращением и без</a><a href="edge.html#heading-64">01.2.12. Проверка гипотез</a><a href="edge.html#heading-70">01.2.13. Сводная таблица</a><a href="edge.html#heading-72">01.2.14. Выводы</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="dependence.html">01.3. Связь числа дефектов в центре и у края</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="rdef.html">01.4. Смещение центра дефектов</a><button aria-controls="sub-rdef" aria-expanded="false" aria-label="Подразделы: 01.4. Смещение центра дефектов" class="nav-expand" type="button"><span aria-hidden="true">⌄</span></button></div><div class="nav-children" hidden="" id="sub-rdef"><a href="rdef.html#heading-85">01.4.1. Что измеряем</a><a href="rdef.html#heading-89">01.4.2. Разброс внутри партий</a><a href="rdef.html#heading-94">01.4.3. Распределение смещения</a><a href="rdef.html#heading-96">01.4.4. Описательные статистики</a><a href="rdef.html#heading-99">01.4.5. Сравнение трёх моделей</a><a href="rdef.html#heading-106">01.4.6. Модель равномерных дефектов</a><a href="rdef.html#heading-110">01.4.7. Модели распределения</a><a href="rdef.html#heading-112">01.4.8. Преобразования шкалы</a><a href="rdef.html#heading-116">01.4.9. Проверка оценок на выборках</a><a href="rdef.html#heading-118">01.4.10. Состоятельность оценок</a><a href="rdef.html#heading-121">01.4.11. Выборки с возвращением и без</a><a href="rdef.html#heading-126">01.4.12. Проверка гипотез</a><a href="rdef.html#heading-130">01.4.13. Сводная таблица результатов</a><a href="rdef.html#heading-132">01.4.14. Выводы</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="results.html#heading-134">01.5. Выводы первого спринта</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="results.html#heading-137">01.6. cat_mark_table</a></div></div><a class="nav-group-link a c t i v e - g r o u p" href="generator.html#heading-139">02. Второй спринт. Генератор случайных чисел</a><div class="drawer-chapter active"><div class="drawer-page-row"><a aria-current="page" class="nav-page active" href="generator.html#heading-140">02.1. Генератор смещения центра дефектов</a><button aria-controls="sub-generator" aria-expanded="true" aria-label="Подразделы: 02.1. Генератор смещения центра дефектов" class="nav-expand" type="button"><span aria-hidden="true">⌄</span></button></div><div class="nav-children" id="sub-generator"><a href="generator.html#heading-141">02.1.1. Как получаем случайное смещение</a><a href="generator.html#heading-142">02.1.2. Сравнение с реальными пластинами</a><a href="generator.html#heading-145">02.1.3. Проверка одного числа на графике</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="generator.html#heading-149">02.2. cat_mark_table</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="sources.html#heading-151">Источники</a></div></div></nav></aside><main id="main"><div class="page-hero"><p class="eyebrow">LAB 01 / APPSTAT</p><h1 class="title-page" id="heading-139">02. Второй спринт. Генератор случайных чисел</h1><div class="hero-orbit"></div></div><div class="article-layout"><aside class="section-index"><p>На этой странице</p><div id="local-index"></div></aside><details class="section-index-mobile"><summary>На этой странице <span aria-hidden="true">⌄</span></summary><nav aria-label="На этой странице" id="local-index-mobile"></nav></details><article class="article-body">
+<section class="cell prose-cell" id="cell-140">
+<h2 class="level-chapter toc-heading" id="heading-140">02.1. Генератор смещения центра дефектов</h2>
+</section>
+<section class="cell prose-cell" id="cell-141"><h3 class="level-subsection toc-heading" id="heading-141">02.1.1. Как получаем случайное смещение</h3>
+<p>По итогам первого спринта выбрали распределение Рэлея для <code>r_def</code>. Его функция распределения при <span class="math">\(r\ge0\)</span> равна <span class="math">\(F(r)=1-\exp[-r^2/(2\sigma^2)]\)</span>. Оценка масштаба <span class="math">\(\hat\sigma=\sqrt{\frac1{2n}\sum_i r_i^2}\)</span> получена по полному набору пластин.</p>
+<p>Генерируем <span class="math">\(u\)</span> равномерно на <span class="math">\([0,1)\)</span> и решаем уравнение <span class="math">\(F(r)=u\)</span>. Получаем <span class="math">\(r=\hat\sigma\sqrt{-2\ln(1-u)}\)</span>. На рисунке проверяем одно случайное число, а по таблице и двум графикам сравниваем целые выборки.</p>
+<p>Формула обратной функции приведена в справочнике <a href="https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/rayppf.htm" rel="noopener noreferrer" target="_blank">NIST, Rayleigh Percent Point Function</a>.</p>
+</section>
+<section class="cell prose-cell" id="cell-142"><h3 class="level-subsection toc-heading" id="heading-142">02.1.2. Сравнение с реальными пластинами</h3>
+</section>
+<section class="cell code-cell" id="cell-143"><pre class="output-text">Масштаб Рэлея: 0.05630; максимальная разница эмпирических CDF: 0.0047</pre><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-143-1.png"><img alt="График исследования" loading="lazy" src="assets/charts/chart-143-1.png"/><span class="expand-label">↗</span></button><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>Данные</th>
+<th>Генератор</th>
+<th>Разница</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>Среднее</th>
+<td>0.070453</td>
+<td>0.070438</td>
+<td>-0.000016</td>
+</tr>
+<tr>
+<th>Дисперсия</th>
+<td>0.001376</td>
+<td>0.001358</td>
+<td>-0.000018</td>
+</tr>
+<tr>
+<th>Медиана</th>
+<td>0.066077</td>
+<td>0.066383</td>
+<td>0.000306</td>
+</tr>
+<tr>
+<th>Квантиль 95%</th>
+<td>0.138351</td>
+<td>0.137528</td>
+<td>-0.000823</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Генератор Рэлея и проверка по данным
+observed = df["r_def"].dropna().to_numpy()
+sigma_hat = np.sqrt(np.mean(observed**2) / 2)
+generator_rng = np.random.default_rng(42)
+uniform = generator_rng.random(len(observed))
+generated = sigma_hat * np.sqrt(-2 * np.log1p(-uniform))
+assert np.isfinite(generated).all() and (generated &gt;= 0).all()
+assert np.allclose(-np.expm1(-generated**2 / (2 * sigma_hat**2)), uniform)
+
+fig, axes = plt.subplots(1, 2, figsize=(12, 4.4))
+bins = np.linspace(0, max(observed.max(), generated.max()), 38)
+for values, label, color in [(observed, "Данные", SPACE_COLORS["cyan"]), (generated, "Генератор", SPACE_COLORS["violet"] )]:
+    axes[0].hist(values, bins=bins, density=True, histtype="step", linewidth=2, color=color, label=label)
+    sorted_values = np.sort(values)
+    axes[1].step(sorted_values, np.arange(1, len(values)+1)/len(values), where="post", color=color, label=label)
+axes[0].set(xlabel="Смещение, доля радиуса", ylabel="Плотность")
+axes[1].set(xlabel="Смещение, доля радиуса", ylabel="Накопленная доля")
+for ax in axes:
+    ax.legend()
+    style_axis(ax)
+plt.tight_layout()
+plt.show()
+
+def describe_sample(values):
+    return {"Среднее": values.mean(), "Дисперсия": values.var(ddof=1),
+            "Медиана": np.median(values), "Квантиль 95%": np.quantile(values, 0.95)}
+comparison = pd.DataFrame({"Данные": describe_sample(observed), "Генератор": describe_sample(generated)})
+comparison["Разница"] = comparison["Генератор"] - comparison["Данные"]
+print(f"Масштаб Рэлея: {sigma_hat:.5f}; максимальная разница эмпирических CDF: {stats.ks_2samp(observed, generated).statistic:.4f}")
+comparison.round(6)
+</code></pre></details></section>
+<section class="cell prose-cell" id="cell-144"><p>На графиках распределения близки. Максимальная разница накопленных долей — 0,0047. В таблице можно сверить среднее, дисперсию, медиану и 95-й квантиль. Модель подогнана по тому же набору, с которым сравниваем генерацию. Поэтому графики и метрики показывают, насколько хорошо генератор воспроизводит этот набор, а не результат проверки на новых пластинах.</p>
+</section>
+<section class="cell prose-cell" id="cell-145"><h3 class="level-subsection toc-heading" id="heading-145">02.1.3. Проверка одного числа на графике</h3>
+</section><section class="lab-panel" id="interactive-rayleigh">
+<div class="panel-top"><span class="eyebrow">02.1.3. Проверка одного числа на графике</span><span class="status"><span></span>Rayleigh</span></div>
+<div class="controls-grid">
+<label>seed <input id="seed" min="0" step="1" type="number" value="42"/></label>
+<label>σ <input id="sigma" max="1" min="0.0001" step="0.0001" type="number" value="0.05630"/></label>
+<label>n <input id="samples" max="5000" min="100" step="100" type="range" value="1000"/><output id="samples-n">1000</output></label>
+</div>
+<div class="actions"><button class="action-primary" id="generate">Сгенерировать выборку <span>↗</span></button><button class="action-secondary" id="save-csv">CSV ↧</button></div>
+<div class="metric-grid"><div><small>Среднее</small><strong id="mean-out">—</strong></div><div><small>Дисперсия</small><strong id="variance-out">—</strong></div><div><small>Медиана</small><strong id="median-out">—</strong></div><div><small>Квантиль 95%</small><strong id="quantile-out">—</strong></div></div>
+<div class="draw-grid"><div class="plot-panel"><span>Плотность</span><canvas aria-label="Гистограмма сгенерированных значений" height="380" id="hist-chart" width="700"></canvas></div><div class="plot-panel"><span>Накопленная доля</span><canvas aria-label="Функция распределения" height="380" id="cdf-chart" width="700"></canvas></div></div>
+<div class="point-readout"><span>u = <strong id="u-out">—</strong></span><span>смещение = <strong id="value-out">—</strong></span><span>F(смещение) = <strong id="check-out">—</strong></span></div>
+</section>
+<section class="cell prose-cell" id="cell-146"><p>Параметр <code>seed</code> задаёт воспроизводимую генерацию случайного числа. Пунктир ведёт от вероятности к смещению, а под графиком показана обратная проверка <span class="math">\(F(r)=u\)</span>.</p>
+</section>
+<section class="cell code-cell" id="cell-147"><pre class="output-text">u = 0.773956; смещение = 0.097097; проверка F(смещение) = 0.773956</pre><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-147-1.png"><img alt="График исследования" loading="lazy" src="assets/charts/chart-147-1.png"/><span class="expand-label">↗</span></button><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Одно случайное число на графике { run: "auto" }
+seed = 42 # @param {type:"integer"}
+u = np.random.default_rng(seed).random()
+value = sigma_hat * np.sqrt(-2 * np.log1p(-u))
+grid = np.linspace(0, max(4*sigma_hat, value*1.1), 400)
+cdf = -np.expm1(-grid**2 / (2*sigma_hat**2))
+fig, ax = plt.subplots(figsize=(8, 4))
+ax.plot(grid, cdf, color=SPACE_COLORS["cyan"], linewidth=1.8, label="CDF Рэлея")
+ax.hlines(u, 0, value, linestyle="--", color=SPACE_COLORS["mint"])
+ax.vlines(value, 0, u, linestyle="--", color=SPACE_COLORS["mint"])
+ax.scatter(value, u, color=SPACE_COLORS["gold"], s=42, zorder=3)
+ax.set(xlabel="Смещение, доля радиуса", ylabel="Накопленная вероятность", ylim=(0, 1.03))
+ax.legend()
+style_axis(ax)
+plt.show()
+print(f"u = {u:.6f}; смещение = {value:.6f}; проверка F(смещение) = {-np.expm1(-value**2/(2*sigma_hat**2)):.6f}")
+</code></pre></details></section>
+<section class="cell prose-cell" id="cell-148"><p><strong>Проверка обратного преобразования.</strong> При seed 42 получилось <span class="math">\(u=0{,}773956\)</span>. По пунктиру считываем смещение около 0,0971 радиуса. Подставляем его обратно в функцию распределения и получаем исходное <span class="math">\(u\)</span> с указанной точностью.</p>
+</section><section class="cell prose-cell" id="cell-149">
+<h2 class="level-chapter toc-heading" id="heading-149">02.2. cat_mark_table</h2>
+</section><section class="cell prose-cell" id="cell-150"><div class="table-wrap"><table>
+<thead>
+<tr>
+<th>cat_id</th>
+<th>notebook_link</th>
+<th>coeff</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lab.de.01</td>
+<td><a href="generator.html#cell-142">Сравнение с данными</a></td>
+<td></td>
+<td>Гистограмма, накопленные доли и сводка метрик</td>
+</tr>
+<tr>
+<td>lab.de.01</td>
+<td><a href="generator.html#cell-145">Проверка одного числа</a></td>
+<td></td>
+<td>Интерактивная проверка метода обратной функции</td>
+</tr>
+<tr>
+<td>lab.de.01</td>
+<td><a href="generator.html#cell-141">Метод обратной функции</a></td>
+<td></td>
+<td>Формула в LaTeX и ссылка на материал по генератору</td>
+</tr>
+</tbody>
+</table></div>
+</section></article></div><nav aria-label="Переходы между разделами" class="page-direction"><a class="step-link step-prev" href="results.html"><span class="step-meta">← Назад</span><strong>01.5. Выводы первого спринта</strong></a><a class="step-link step-next" href="sources.html"><span class="step-meta">Далее →</span><strong>Источники</strong></a></nav></main><button aria-label="Наверх" class="back-to-top" type="button">↑</button><footer class="site-footer"><a class="brand" href="index.html">APPSTAT<span>✦</span></a><span>LAB 01 · WM-811K</span><a href="sources.html">Источники ↗</a></footer><div aria-label="График" aria-modal="true" class="lightbox" hidden="" role="dialog">
+<div class="lightbox-dialog"><div class="lightbox-toolbar"><span>График</span><div class="lightbox-actions">
+<button aria-label="Уменьшить график" class="zoom-out" type="button">−</button><output class="zoom-label">100%</output>
+<button aria-label="Увеличить график" class="zoom-in" type="button">+</button>
+<button aria-label="Закрыть график" class="lightbox-close" type="button">×</button></div></div>
+<div class="lightbox-viewport"><img alt="Увеличенный график"/></div></div></div><script>window.MathJax={tex:{inlineMath:[["\\(","\\)"],["$","$"]],displayMath:[["\\[","\\]"]] },options:{skipHtmlTags:["script","noscript","style","textarea","pre","code"]}};</script><script async="" src="assets/vendor/mathjax/tex-svg.js"></script><script src="assets/app.js"></script></body></html>

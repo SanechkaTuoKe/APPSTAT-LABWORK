@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="#050816" name="theme-color"/><meta content="Статистический анализ дефектов полупроводниковых пластин — APPSTAT" name="description"/><title>01.4. Смещение центра дефектов — APPSTAT</title><link href="assets/style.css" rel="stylesheet"/></head><body data-page="rdef"><div class="noise"></div><header class="site-header"><a aria-label="LAB 01 | APPSTAT" class="brand" href="index.html">APPSTAT<span>✦</span></a>
+<div aria-label="Текущий раздел" class="breadcrumbs"><a href="index.html">LAB 01 | APPSTAT</a><span class="crumb-sep">/</span><span class="crumb-current">01.4. Смещение центра дефектов</span></div>
+<div class="header-actions"><a class="header-home" href="index.html">← Главная</a><button aria-controls="drawer" aria-expanded="false" class="menu-toggle" type="button"><span class="menu-caption">Содержание</span><span aria-hidden="true" class="menu-bars">☰</span></button></div></header><div class="mobile-mask" hidden=""></div><aside aria-hidden="true" aria-label="Содержание" class="drawer" id="drawer"><div class="drawer-head"><strong>Содержание</strong><button aria-label="Закрыть меню" class="drawer-close" type="button">×</button></div><nav aria-label="Содержание" class="drawer-body"><a class="nav-root" href="index.html">LAB 01 | APPSTAT</a><a class="nav-group-link" href="index.html#sprint1">01. Первый спринт. Исследование случайных величин</a><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="data.html">01.0. Данные исследования</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="center.html">01.1. Дефекты в центре пластины</a><button aria-controls="sub-center" aria-expanded="false" aria-label="Подразделы: 01.1. Дефекты в центре пластины" class="nav-expand" type="button"><span aria-hidden="true">⌄</span></button></div><div class="nav-children" hidden="" id="sub-center"><a href="center.html#heading-9">01.1.1. Описание случайной величины</a><a href="center.html#heading-10">01.1.2. Распределение числа дефектов</a><a href="center.html#heading-21">01.1.3. Состоятельность среднего и сравнение выборок</a><a href="center.html#heading-24">01.1.4. Выводы</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="edge.html">01.2. Дефекты у края пластины</a><button aria-controls="sub-edge" aria-expanded="false" aria-label="Подразделы: 01.2. Дефекты у края пластины" class="nav-expand" type="button"><span aria-hidden="true">⌄</span></button></div><div class="nav-children" hidden="" id="sub-edge"><a href="edge.html#heading-26">01.2.1. Как определили краевую зону</a><a href="edge.html#heading-29">01.2.2. Случайность: разброс внутри лотов</a><a href="edge.html#heading-33">01.2.3. Распределение числа дефектов</a><a href="edge.html#heading-35">01.2.4. Описательные статистики</a><a href="edge.html#heading-38">01.2.5. Подгонка распределений</a><a href="edge.html#heading-43">01.2.6. Сравнение моделей с данными</a><a href="edge.html#heading-47">01.2.7. Нормализация</a><a href="edge.html#heading-51">01.2.8. Формулы распределений</a><a href="edge.html#heading-52">01.2.9. Проверка оценок на выборках</a><a href="edge.html#heading-54">01.2.10. Состоятельность оценок</a><a href="edge.html#heading-57">01.2.11. Выборки с возвращением и без</a><a href="edge.html#heading-64">01.2.12. Проверка гипотез</a><a href="edge.html#heading-70">01.2.13. Сводная таблица</a><a href="edge.html#heading-72">01.2.14. Выводы</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="dependence.html">01.3. Связь числа дефектов в центре и у края</a></div></div><div class="drawer-chapter active"><div class="drawer-page-row"><a aria-current="page" class="nav-page active" href="rdef.html">01.4. Смещение центра дефектов</a><button aria-controls="sub-rdef" aria-expanded="true" aria-label="Подразделы: 01.4. Смещение центра дефектов" class="nav-expand" type="button"><span aria-hidden="true">⌄</span></button></div><div class="nav-children" id="sub-rdef"><a href="rdef.html#heading-85">01.4.1. Что измеряем</a><a href="rdef.html#heading-89">01.4.2. Разброс внутри партий</a><a href="rdef.html#heading-94">01.4.3. Распределение смещения</a><a href="rdef.html#heading-96">01.4.4. Описательные статистики</a><a href="rdef.html#heading-99">01.4.5. Сравнение трёх моделей</a><a href="rdef.html#heading-106">01.4.6. Модель равномерных дефектов</a><a href="rdef.html#heading-110">01.4.7. Модели распределения</a><a href="rdef.html#heading-112">01.4.8. Преобразования шкалы</a><a href="rdef.html#heading-116">01.4.9. Проверка оценок на выборках</a><a href="rdef.html#heading-118">01.4.10. Состоятельность оценок</a><a href="rdef.html#heading-121">01.4.11. Выборки с возвращением и без</a><a href="rdef.html#heading-126">01.4.12. Проверка гипотез</a><a href="rdef.html#heading-130">01.4.13. Сводная таблица результатов</a><a href="rdef.html#heading-132">01.4.14. Выводы</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="results.html#heading-134">01.5. Выводы первого спринта</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="results.html#heading-137">01.6. cat_mark_table</a></div></div><a class="nav-group-link" href="generator.html#heading-139">02. Второй спринт. Генератор случайных чисел</a><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="generator.html#heading-140">02.1. Генератор смещения центра дефектов</a><button aria-controls="sub-generator" aria-expanded="false" aria-label="Подразделы: 02.1. Генератор смещения центра дефектов" class="nav-expand" type="button"><span aria-hidden="true">⌄</span></button></div><div class="nav-children" hidden="" id="sub-generator"><a href="generator.html#heading-141">02.1.1. Как получаем случайное смещение</a><a href="generator.html#heading-142">02.1.2. Сравнение с реальными пластинами</a><a href="generator.html#heading-145">02.1.3. Проверка одного числа на графике</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="generator.html#heading-149">02.2. cat_mark_table</a></div></div><div class="drawer-chapter"><div class="drawer-page-row"><a class="nav-page" href="sources.html#heading-151">Источники</a></div></div></nav></aside><main id="main"><div class="page-hero"><p class="eyebrow">LAB 01 / APPSTAT</p><h1 class="title-page" id="heading-84">01.4. Смещение центра дефектов</h1><div class="hero-orbit"></div></div><div class="article-layout"><aside class="section-index"><p>На этой странице</p><div id="local-index"></div></aside><details class="section-index-mobile"><summary>На этой странице <span aria-hidden="true">⌄</span></summary><nav aria-label="На этой странице" id="local-index-mobile"></nav></details><article class="article-body">
+<section class="cell prose-cell" id="cell-85"><h2 class="level-subsection toc-heading" id="heading-85">01.4.1. Что измеряем</h2>
+</section>
+<section class="cell prose-cell" id="cell-86"><p>Центроид дефектов — точка со средними координатами дефектных чипов на пластине. Величина <code>r_def</code> показывает расстояние от центра пластины до этой точки в долях максимального расстояния от центра до чипа. При <span class="math">\(r_{\mathrm{def}}\approx 0\)</span> центроид находится близко к центру, даже если отдельные дефекты разбросаны по всей пластине. Для пластин без дефектов величина не определена.</p>
+</section>
+<section class="cell code-cell" id="cell-87"><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from scipy import stats
+
+# константы
+SEED = 42
+N_REP = 100        # повторов на размер выборки (состоятельность)
+N_SAMPLE = 1000    # размер выборки с возвращением / без
+N_MC = 500         # повторов Монте-Карло для sd среднего
+N_GOF = 2000       # подвыборка для goodness_of_fit
+B_GOF = 200        # n_mc_samples для goodness_of_fit
+K_CHI2 = 20        # число равновероятных интервалов для chi2
+EPS = 1e-6         # обрезка 0 и 1
+
+rng = np.random.default_rng(SEED)</code></pre></details></section>
+<section class="cell code-cell" id="cell-88"><pre class="output-text">df.shape = (15881, 11)
+dieSize = 516.0 | число лотов = 715
+r_def определена: 15881 из 15881, выпало 0.0000%
+точных 0: 0 | точных 1: 0
+n_defect == 1: 0 | n_defect &gt;= 2: 15881 | min n_defect: 49</pre><pre class="output-text">count    15881.000000
+mean         0.070453
+std          0.037101
+min          0.001277
+25%          0.042462
+50%          0.066077
+75%          0.093726
+max          0.256344
+Name: r_def, dtype: float64</pre><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+x_all = df["r_def"]
+x = x_all.dropna()
+print("df.shape =", df.shape)
+print("dieSize =", df["dieSize"].iloc[0], "| число лотов =", df["lotName"].nunique())
+print(f"r_def определена: {len(x)} из {len(x_all)}, выпало {x_all.isna().mean():.4%}")
+print("точных 0:", int((x == 0).sum()), "| точных 1:", int((x == 1).sum()))
+print("n_defect == 1:", int((df["n_defect"] == 1).sum()), "| n_defect &gt;= 2:", int((df["n_defect"] &gt;= 2).sum()),
+      "| min n_defect:", df["n_defect"].min())
+x.describe()</code></pre></details></section>
+<section class="cell prose-cell" id="cell-89"><h2 class="level-subsection toc-heading" id="heading-89">01.4.2. Разброс внутри партий</h2>
+<p>Пластины из одной партии могут иметь разные центроиды из-за разного расположения дефектов. Сравнение внутри партий на графике показывает вариацию при фиксированной партии.</p>
+</section>
+<section class="cell prose-cell" id="cell-90"><p>Сравниваем пластины внутри одной партии, чтобы увидеть, насколько смещение меняется даже при общей принадлежности к партии.</p>
+</section>
+<section class="cell code-cell" id="cell-91"><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>count</th>
+<th>min</th>
+<th>max</th>
+<th>mean</th>
+<th>std</th>
+</tr>
+<tr>
+<th>lotName</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>lot42869</th>
+<td>23</td>
+<td>0.003087</td>
+<td>0.150390</td>
+<td>0.068340</td>
+<td>0.037052</td>
+</tr>
+<tr>
+<th>lot42870</th>
+<td>25</td>
+<td>0.017336</td>
+<td>0.159438</td>
+<td>0.062587</td>
+<td>0.033798</td>
+</tr>
+<tr>
+<th>lot42871</th>
+<td>21</td>
+<td>0.009933</td>
+<td>0.116662</td>
+<td>0.064207</td>
+<td>0.028393</td>
+</tr>
+<tr>
+<th>lot42872</th>
+<td>23</td>
+<td>0.005161</td>
+<td>0.164861</td>
+<td>0.056299</td>
+<td>0.037681</td>
+</tr>
+<tr>
+<th>lot42873</th>
+<td>21</td>
+<td>0.010791</td>
+<td>0.124241</td>
+<td>0.056179</td>
+<td>0.032151</td>
+</tr>
+<tr>
+<th>lot42874</th>
+<td>24</td>
+<td>0.027964</td>
+<td>0.137051</td>
+<td>0.075958</td>
+<td>0.028329</td>
+</tr>
+<tr>
+<th>lot42875</th>
+<td>23</td>
+<td>0.027956</td>
+<td>0.151073</td>
+<td>0.071685</td>
+<td>0.031173</td>
+</tr>
+<tr>
+<th>lot42876</th>
+<td>23</td>
+<td>0.021081</td>
+<td>0.122694</td>
+<td>0.065492</td>
+<td>0.023772</td>
+</tr>
+<tr>
+<th>lot42877</th>
+<td>25</td>
+<td>0.020002</td>
+<td>0.152667</td>
+<td>0.070106</td>
+<td>0.037416</td>
+</tr>
+<tr>
+<th>lot42878</th>
+<td>24</td>
+<td>0.002756</td>
+<td>0.154342</td>
+<td>0.063629</td>
+<td>0.037046</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+by_lot = df.dropna(subset=["r_def"]).groupby("lotName")["r_def"].agg(["count", "min", "max", "mean", "std"])
+by_lot[by_lot["count"] &gt;= 10].head(10)</code></pre></details></section>
+<section class="cell code-cell" id="cell-92"><pre class="output-text">дисперсия всей выборки      0.001376
+внутрилотовая компонента    0.001334
+межлотовая компонента       0.000102
+ICC                         0.071074
+dtype: float64</pre><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# разложение дисперсии: внутри лотов и между лотами
+g = df.dropna(subset=["r_def"]).groupby("lotName")["r_def"]
+var_within = (g.var(ddof=1).fillna(0) * (g.size() - 1)).sum() / (len(x) - g.ngroups)
+var_between = g.mean().var(ddof=1)
+icc = var_between / (var_between + var_within)
+pd.Series({"дисперсия всей выборки": x.var(ddof=1),
+           "внутрилотовая компонента": var_within,
+           "межлотовая компонента": var_between,
+           "ICC": icc}).round(6)</code></pre></details></section>
+<section class="cell code-cell" id="cell-93"><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-93-0.png"><img alt="График исследования" loading="lazy" src="assets/charts/chart-93-0.png"/><span class="expand-label">↗</span></button><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+top = df["lotName"].value_counts().head(20).index
+data = [df.loc[df["lotName"] == lot, "r_def"].dropna().values for lot in top]
+fig, ax = plt.subplots(figsize=(11, 4))
+bp = ax.boxplot(data, patch_artist=True)
+for box in bp['boxes']:
+    box.set(facecolor=SPACE_COLORS["violet"], edgecolor=SPACE_COLORS["soft"], alpha=0.48)
+for med in bp['medians']:
+    med.set(color=SPACE_COLORS["gold"], linewidth=1.6)
+for w in bp['whiskers'] + bp['caps']:
+    w.set(color=SPACE_COLORS["edge"])
+ax.set_xticks(range(1, len(top) + 1), top, rotation=90)
+ax.set_xlabel("лот (lotName)")
+ax.set_ylabel("r_def, доля радиуса")
+ax.set_title("r_def внутри лотов (20 самых крупных лотов)")
+style_axis(ax)
+plt.tight_layout()
+plt.show()
+</code></pre></details></section>
+<section class="cell prose-cell" id="cell-94"><h2 class="level-subsection toc-heading" id="heading-94">01.4.3. Распределение смещения</h2>
+</section>
+<section class="cell code-cell" id="cell-95"><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-95-0.png" type="button"><img alt="График исследования" loading="lazy" src="assets/charts/chart-95-0.png"/><span class="expand-label">↗</span></button><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+fig, ax = plt.subplots(figsize=(9, 4))
+ax.hist(x, bins=60, density=True, color=SPACE_COLORS["cyan"], edgecolor=SPACE_COLORS["soft"], linewidth=0.3)
+ax.set_xlabel("r_def, доля радиуса")
+ax.set_ylabel("плотность вероятности, 1/доля радиуса")
+ax.set_title("Распределение r_def")
+style_axis(ax)
+plt.show()
+</code></pre></details></section>
+<section class="cell prose-cell" id="cell-96"><h2 class="level-subsection toc-heading" id="heading-96">01.4.4. Описательные статистики</h2>
+</section>
+<section class="cell code-cell" id="cell-97"><pre class="output-text">n                       15881.00000
+среднее                     0.07045
+дисперсия (ddof=1)          0.00138
+ст. отклонение              0.03710
+медиана                     0.06608
+q05                         0.01802
+q25                         0.04246
+q75                         0.09373
+q95                         0.13835
+min                         0.00128
+max                         0.25634
+асимметрия                  0.66048
+эксцесс (избыточный)        0.34166
+dtype: float64</pre><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+xv = x.to_numpy()
+N = len(xv)
+pd.Series({
+    "n": N, "среднее": xv.mean(), "дисперсия (ddof=1)": xv.var(ddof=1), "ст. отклонение": xv.std(ddof=1),
+    "медиана": np.median(xv), "q05": np.quantile(xv, 0.05), "q25": np.quantile(xv, 0.25),
+    "q75": np.quantile(xv, 0.75), "q95": np.quantile(xv, 0.95), "min": xv.min(), "max": xv.max(),
+    "асимметрия": stats.skew(xv), "эксцесс (избыточный)": stats.kurtosis(xv),
+}).round(5)</code></pre></details></section>
+<section class="cell code-cell" id="cell-98"><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-98-0.png"><img alt="График исследования" loading="lazy" src="assets/charts/chart-98-0.png"/><span class="expand-label">↗</span></button><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>count</th>
+<th>mean</th>
+<th>median</th>
+<th>std</th>
+</tr>
+<tr>
+<th>n_defect</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>(48.999, 84.0]</th>
+<td>3443</td>
+<td>0.0791</td>
+<td>0.0744</td>
+<td>0.0413</td>
+</tr>
+<tr>
+<th>(84.0, 93.0]</th>
+<td>3115</td>
+<td>0.0731</td>
+<td>0.0693</td>
+<td>0.0378</td>
+</tr>
+<tr>
+<th>(93.0, 102.0]</th>
+<td>3293</td>
+<td>0.0693</td>
+<td>0.0656</td>
+<td>0.0362</td>
+</tr>
+<tr>
+<th>(102.0, 112.0]</th>
+<td>2879</td>
+<td>0.0666</td>
+<td>0.0626</td>
+<td>0.0341</td>
+</tr>
+<tr>
+<th>(112.0, 186.0]</th>
+<td>3151</td>
+<td>0.0630</td>
+<td>0.0593</td>
+<td>0.0327</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# режимы по числу дефектов: случаев n_defect = 1 нет, группы по квинтилям n_defect
+k_grp = pd.qcut(df.loc[x.index, "n_defect"], 5)
+fig, ax = plt.subplots(figsize=(9, 4))
+for grp, s in x.groupby(k_grp, observed=True):
+    ax.hist(s, bins=50, density=True, histtype="step", lw=1.5, label=f"n_defect {grp}")
+ax.set_xlabel("r_def, доля радиуса")
+ax.set_ylabel("плотность вероятности, 1/доля радиуса")
+ax.set_title("r_def по группам n_defect")
+ax.legend()
+style_axis(ax)
+plt.show()
+x.groupby(k_grp, observed=True).agg(["count", "mean", "median", "std"]).round(4)
+</code></pre></details></section>
+<section class="cell prose-cell" id="cell-99"><h2 class="level-subsection toc-heading" id="heading-99">01.4.5. Сравнение трёх моделей</h2>
+</section>
+<section class="cell prose-cell" id="cell-100"><p>Сопоставляем бета-распределение, распределение Рэлея и распределение Вейбулла. Сначала сравниваем модели по AIC, затем отдельно проверяем согласие с наблюдениями.</p>
+</section>
+<section class="cell code-cell" id="cell-101"><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>параметры</th>
+<th>число параметров</th>
+<th>logL</th>
+<th>AIC</th>
+<th>среднее модели</th>
+<th>1 - F(1)</th>
+<th>dAIC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>бета</th>
+<td>a=2.9389, b=38.8312</td>
+<td>2</td>
+<td>30533.937203</td>
+<td>-61063.874407</td>
+<td>0.07036</td>
+<td>0.0</td>
+<td>305.465052</td>
+</tr>
+<tr>
+<th>Рэлей</th>
+<td>sigma=0.05630</td>
+<td>1</td>
+<td>30685.669729</td>
+<td>-61369.339459</td>
+<td>0.070565</td>
+<td>0.0</td>
+<td>0.000000</td>
+</tr>
+<tr>
+<th>Вейбулл</th>
+<td>c=1.9857, lambda=0.07950</td>
+<td>2</td>
+<td>30686.344556</td>
+<td>-61368.689112</td>
+<td>0.070468</td>
+<td>0.0</td>
+<td>0.650347</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+xc = np.clip(xv, EPS, 1 - EPS)
+a_hat, b_hat, _, _ = stats.beta.fit(xc, floc=0, fscale=1)
+_, s_ray = stats.rayleigh.fit(xv, floc=0)
+c_wb, _, s_wb = stats.weibull_min.fit(xv, floc=0)
+
+fits = {
+    "бета": {"dist": stats.beta, "args": (a_hat, b_hat, 0, 1), "k": 2, "data": xc,
+             "params": f"a={a_hat:.4f}, b={b_hat:.4f}"},
+    "Рэлей": {"dist": stats.rayleigh, "args": (0, s_ray), "k": 1, "data": xv,
+              "params": f"sigma={s_ray:.5f}"},
+    "Вейбулл": {"dist": stats.weibull_min, "args": (c_wb, 0, s_wb), "k": 2, "data": xv,
+                "params": f"c={c_wb:.4f}, lambda={s_wb:.5f}"},
+}
+for f in fits.values():
+    f["ll"] = f["dist"].logpdf(f["data"], *f["args"]).sum()
+    f["frozen"] = f["dist"](*f["args"])
+
+fit_table = pd.DataFrame({name: {"параметры": f["params"], "число параметров": f["k"], "logL": f["ll"],
+                                 "AIC": 2 * f["k"] - 2 * f["ll"],
+                                 "среднее модели": f["frozen"].mean(), "1 - F(1)": f["frozen"].sf(1)}
+                          for name, f in fits.items()}).T
+fit_table["dAIC"] = fit_table["AIC"].astype(float) - fit_table["AIC"].astype(float).min()
+fit_table</code></pre></details></section>
+<section class="cell code-cell" id="cell-102"><pre class="output-text">LR Рэлей vs Вейбулл = 1.350, p = 2.453e-01, c Вейбулла = 1.9857</pre><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# LR-тест: Рэлей (c = 2) вложен в Вейбулл
+lr_rw = 2 * (fits["Вейбулл"]["ll"] - fits["Рэлей"]["ll"])
+p_rw = stats.chi2.sf(lr_rw, df=1)
+print(f"LR Рэлей vs Вейбулл = {lr_rw:.3f}, p = {p_rw:.3e}, c Вейбулла = {c_wb:.4f}")</code></pre></details></section>
+<section class="cell code-cell" id="cell-103"><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-103-0.png"><img alt="График исследования" loading="lazy" src="assets/charts/chart-103-0.png"/><span class="expand-label">↗</span></button><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+grid = np.linspace(0, xv.max() * 1.05, 400)
+fig, ax = plt.subplots(figsize=(9, 4.5))
+ax.hist(xv, bins=60, density=True, color=SPACE_COLORS["cyan"], edgecolor=SPACE_COLORS["soft"], linewidth=0.3, alpha=0.28, label="данные")
+for name, f in fits.items():
+    ax.plot(grid, f["frozen"].pdf(grid), lw=1.8, label=name)
+ax.set_xlabel("r_def, доля радиуса")
+ax.set_ylabel("плотность вероятности, 1/доля радиуса")
+ax.set_title("r_def: подогнанные плотности")
+ax.legend()
+style_axis(ax)
+plt.show()
+</code></pre></details></section>
+<section class="cell code-cell" id="cell-104"><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-104-0.png"><img alt="График исследования" loading="lazy" src="assets/charts/chart-104-0.png"/><span class="expand-label">↗</span></button><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+fig, axes = plt.subplots(1, 3, figsize=(16, 4.5))
+qq_cols = [SPACE_COLORS["violet"], SPACE_COLORS["cyan"], SPACE_COLORS["gold"]]
+for ax, (name, f), qcol in zip(axes, fits.items(), qq_cols):
+    stats.probplot(f["data"], dist=f["dist"], sparams=f["args"], plot=ax)
+    style_probplot(ax, point_color=qcol, line_color=SPACE_COLORS["magenta"])
+    ax.set_title(f"QQ-plot r_def против: {name}")
+    ax.set_xlabel("теоретические квантили, доля радиуса")
+    ax.set_ylabel("выборочные квантили, доля радиуса")
+plt.tight_layout()
+plt.show()
+</code></pre></details></section>
+<section class="cell prose-cell" id="cell-105"><p><strong>Почему для генератора выбрали Рэлея.</strong> На квантильных графиках проверяем, где данные отклоняются от модели. По AIC Рэлея и Вейбулла разделяет меньше единицы, а критерий согласия для Рэлея не дал оснований его отвергнуть. Для генератора выбрали Рэлея: здесь достаточно оценить один параметр масштаба.</p>
+</section>
+<section class="cell prose-cell" id="cell-106"><h2 class="level-subsection toc-heading" id="heading-106">01.4.6. Модель равномерных дефектов</h2>
+</section>
+<section class="cell code-cell" id="cell-107"><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-107-0.png"><img alt="График исследования" loading="lazy" src="assets/charts/chart-107-0.png"/><span class="expand-label">↗</span></button><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>группа n_defect</th>
+<th>размер</th>
+<th>медиана k</th>
+<th>sigma Рэлея (ММП)</th>
+<th>теория 1/(2*sqrt(k))</th>
+<th>отношение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>(48.999, 77.0]</td>
+<td>1698</td>
+<td>72.0</td>
+<td>0.06518</td>
+<td>0.05893</td>
+<td>1.10616</td>
+</tr>
+<tr>
+<th>1</th>
+<td>(77.0, 84.0]</td>
+<td>1745</td>
+<td>81.0</td>
+<td>0.06102</td>
+<td>0.05556</td>
+<td>1.09836</td>
+</tr>
+<tr>
+<th>2</th>
+<td>(84.0, 88.0]</td>
+<td>1383</td>
+<td>87.0</td>
+<td>0.05874</td>
+<td>0.05361</td>
+<td>1.09569</td>
+</tr>
+<tr>
+<th>3</th>
+<td>(88.0, 93.0]</td>
+<td>1732</td>
+<td>91.0</td>
+<td>0.05780</td>
+<td>0.05241</td>
+<td>1.10270</td>
+</tr>
+<tr>
+<th>4</th>
+<td>(93.0, 97.0]</td>
+<td>1507</td>
+<td>95.0</td>
+<td>0.05581</td>
+<td>0.05130</td>
+<td>1.08803</td>
+</tr>
+<tr>
+<th>5</th>
+<td>(97.0, 102.0]</td>
+<td>1786</td>
+<td>100.0</td>
+<td>0.05482</td>
+<td>0.05000</td>
+<td>1.09642</td>
+</tr>
+<tr>
+<th>6</th>
+<td>(102.0, 106.0]</td>
+<td>1278</td>
+<td>105.0</td>
+<td>0.05365</td>
+<td>0.04880</td>
+<td>1.09952</td>
+</tr>
+<tr>
+<th>7</th>
+<td>(106.0, 112.0]</td>
+<td>1601</td>
+<td>109.0</td>
+<td>0.05235</td>
+<td>0.04789</td>
+<td>1.09311</td>
+</tr>
+<tr>
+<th>8</th>
+<td>(112.0, 121.0]</td>
+<td>1618</td>
+<td>116.0</td>
+<td>0.05153</td>
+<td>0.04642</td>
+<td>1.10989</td>
+</tr>
+<tr>
+<th>9</th>
+<td>(121.0, 186.0]</td>
+<td>1533</td>
+<td>129.0</td>
+<td>0.04880</td>
+<td>0.04402</td>
+<td>1.10856</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# масштаб Рэлея по группам n_defect против 1/(2*sqrt(k))
+kd = df.loc[x.index, "n_defect"]
+grp = pd.qcut(kd, 10)
+ray_rows = []
+for gname, s in x.groupby(grp, observed=True):
+    k_med = kd[s.index].median()
+    ray_rows.append({"группа n_defect": str(gname), "размер": len(s), "медиана k": k_med,
+                     "sigma Рэлея (ММП)": np.sqrt((s**2).mean() / 2),
+                     "теория 1/(2*sqrt(k))": 1 / (2 * np.sqrt(k_med))})
+ray_tab = pd.DataFrame(ray_rows)
+ray_tab["отношение"] = ray_tab["sigma Рэлея (ММП)"] / ray_tab["теория 1/(2*sqrt(k))"]
+
+fig, ax = plt.subplots(figsize=(8, 4.5))
+ax.plot(ray_tab["медиана k"], ray_tab["sigma Рэлея (ММП)"], "o-", linewidth=1.8, color=SPACE_COLORS["cyan"], label="оценка по данным")
+kk = np.linspace(kd.min(), kd.max(), 200)
+ax.plot(kk, 1 / (2 * np.sqrt(kk)), linestyle="--", linewidth=1.8, color=SPACE_COLORS["magenta"], label=r"$1/(2\sqrt{k})$")
+ax.set_xlabel("n_defect (медиана в группе), чипов")
+ax.set_ylabel("масштаб Рэлея sigma, доля радиуса")
+ax.set_title("Масштаб Рэлея для r_def против теории равномерных дефектов")
+ax.legend()
+style_axis(ax)
+plt.show()
+ray_tab.round(5)
+</code></pre></details></section>
+<section class="cell code-cell" id="cell-108"><pre class="output-text">z: среднее = 1.3816 (Rayleigh(1): 1.2533), sigma ММП = 1.1002</pre><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-108-1.png"><img alt="График исследования" loading="lazy" src="assets/charts/chart-108-1.png"/><span class="expand-label">↗</span></button><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# нормированный центроид z = r_def * 2*sqrt(n_defect): при равномерных дефектах ~ Rayleigh(1)
+z = (x * 2 * np.sqrt(kd)).to_numpy()
+_, s_z = stats.rayleigh.fit(z, floc=0)
+# эталонная смесь: для каждой пластины Rayleigh(1/(2*sqrt(k_i)))
+ref = rng.rayleigh(1 / (2 * np.sqrt(kd.to_numpy())))
+print(f"z: среднее = {z.mean():.4f} (Rayleigh(1): {np.sqrt(np.pi / 2):.4f}), sigma ММП = {s_z:.4f}")
+
+fig, axes = plt.subplots(1, 2, figsize=(14, 4.5))
+gz = np.linspace(0, z.max(), 300)
+axes[0].hist(z, bins=60, density=True, color=SPACE_COLORS["cyan"], edgecolor=SPACE_COLORS["soft"], linewidth=0.3, alpha=0.3, label="данные")
+axes[0].plot(gz, stats.rayleigh.pdf(gz), linestyle="--", linewidth=1.7, color=SPACE_COLORS["magenta"], label="Rayleigh(1)")
+axes[0].plot(gz, stats.rayleigh.pdf(gz, scale=s_z), linewidth=1.8, color=SPACE_COLORS["gold"], label=f"Rayleigh({s_z:.3f})")
+axes[0].set_xlabel(r"$z = r_{def}\cdot 2\sqrt{n_{defect}}$, безразмерная")
+axes[0].set_ylabel("плотность вероятности")
+axes[0].set_title("Нормированный центроид")
+axes[0].legend()
+style_axis(axes[0])
+axes[1].hist(xv, bins=60, density=True, histtype="stepfilled", alpha=0.26, color=SPACE_COLORS["violet"], label="данные r_def")
+axes[1].hist(ref, bins=60, density=True, histtype="step", lw=1.6, color=SPACE_COLORS["mint"], label="эталон: равномерные дефекты")
+axes[1].set_xlabel("r_def, доля радиуса")
+axes[1].set_ylabel("плотность вероятности, 1/доля радиуса")
+axes[1].set_title("r_def против эталона равномерных дефектов")
+axes[1].legend()
+style_axis(axes[1])
+plt.tight_layout()
+plt.show()
+</code></pre></details></section>
+<section class="cell prose-cell" id="cell-109"><p><strong>Что показало сравнение с равномерным эталоном.</strong> С ростом числа дефектов масштаб смещения уменьшается, как и в эталонной модели. При этом оценённый масштаб в группах примерно на 9–11% выше эталона. Это показывает, где простое предположение о равномерных дефектах расходится с данными.</p>
+</section>
+<section class="cell prose-cell" id="cell-110"><h2 class="level-subsection toc-heading" id="heading-110">01.4.7. Модели распределения</h2>
+</section>
+<section class="cell prose-cell" id="cell-111"><p>В бета-модели значения лежат на <span class="math">\([0,1]\)</span>. В моделях Рэлея и Вейбулла шкала начинается с нуля и не имеет верхней границы. Распределение Рэлея соответствует распределению Вейбулла при параметре формы <span class="math">\(c=2\)</span> и соответствующем масштабе. На графиках квантилей смотрим, где модели расходятся с данными.</p>
+<p>Плотность Рэлея при <span class="math">\(r\ge0\)</span> равна <span class="math">\(f(r)=\frac{r}{\sigma^2}e^{-r^2/(2\sigma^2)}\)</span>. Для Вейбулла <span class="math">\(f(r)=\frac{k}{a}(r/a)^{k-1}e^{-(r/a)^k}\)</span> при <span class="math">\(r\ge0\)</span>, а для бета-распределения <span class="math">\(f(r)=r^{\alpha-1}(1-r)^{\beta-1}/B(\alpha,\beta)\)</span> при <span class="math">\(0&lt;r&lt;1\)</span>.</p>
+</section>
+<section class="cell prose-cell" id="cell-112"><h2 class="level-subsection toc-heading" id="heading-112">01.4.8. Преобразования шкалы</h2>
+</section>
+<section class="cell prose-cell" id="cell-113"><p>После преобразования сравниваем форму распределения. Смещение в долях радиуса читаем по графику в исходной шкале.</p>
+</section>
+<section class="cell code-cell" id="cell-114"><pre class="output-text">Бокс-Кокс: lambda = 0.5187</pre><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>асимметрия</th>
+<th>эксцесс (избыточный)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>исходные</th>
+<td>0.6605</td>
+<td>0.3417</td>
+</tr>
+<tr>
+<th>z-score</th>
+<td>0.6605</td>
+<td>0.3417</td>
+</tr>
+<tr>
+<th>логит</th>
+<td>-0.9578</td>
+<td>1.5965</td>
+</tr>
+<tr>
+<th>Бокс-Кокс</th>
+<td>-0.0363</td>
+<td>-0.2608</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+x_bc, lam_bc = stats.boxcox(xv)
+print(f"Бокс-Кокс: lambda = {lam_bc:.4f}")
+transforms = {
+    "исходные": xv,
+    "z-score": (xv - xv.mean()) / xv.std(ddof=1),
+    "логит": np.log(xc / (1 - xc)),
+    "Бокс-Кокс": x_bc,
+}
+pd.DataFrame({name: {"асимметрия": stats.skew(t), "эксцесс (избыточный)": stats.kurtosis(t)}
+              for name, t in transforms.items()}).T.round(4)</code></pre></details></section>
+<section class="cell code-cell" id="cell-115"><div aria-label="Графики" class="chart-viewer"><div aria-label="Преобразования шкалы" class="chart-tabs" role="tablist"><button aria-selected="true" data-image="assets/charts/chart-115-0-view-1.png" id="view-tab-chart-115-0-0" role="tab" tabindex="0" type="button">исходные</button><button aria-selected="false" data-image="assets/charts/chart-115-0-view-2.png" id="view-tab-chart-115-0-1" role="tab" tabindex="-1" type="button">z-score</button><button aria-selected="false" data-image="assets/charts/chart-115-0-view-3.png" id="view-tab-chart-115-0-2" role="tab" tabindex="-1" type="button">логит</button><button aria-selected="false" data-image="assets/charts/chart-115-0-view-4.png" id="view-tab-chart-115-0-3" role="tab" tabindex="-1" type="button">Бокс-Кокс</button></div><button aria-label="Увеличить график" class="chart-expand chart-expand-tabbed" data-img="assets/charts/chart-115-0-view-1.png" type="button"><img alt="График исследования" loading="lazy" src="assets/charts/chart-115-0-view-1.png"/><span class="expand-label">↗</span></button></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+fig, axes = plt.subplots(len(transforms), 2, figsize=(12.6, 3.9 * len(transforms)))
+hist_colors = [SPACE_COLORS["cyan"], SPACE_COLORS["teal"], SPACE_COLORS["violet"], SPACE_COLORS["gold"]]
+qq_colors = [SPACE_COLORS["violet"], SPACE_COLORS["cyan"], SPACE_COLORS["magenta"], SPACE_COLORS["gold"]]
+for j, (name, t) in enumerate(transforms.items()):
+    hax, qax = axes[j, 0], axes[j, 1]
+    hax.hist(t, bins=50, density=True, color=hist_colors[j % len(hist_colors)], edgecolor=SPACE_COLORS["soft"], linewidth=0.35)
+    hax.set_title(name)
+    hax.set_xlabel("Смещение, доля радиуса" if name == "исходные" else "преобразованная шкала (безразмерная)")
+    hax.set_ylabel("плотность")
+    style_axis(hax)
+    stats.probplot(t, dist="norm", plot=qax)
+    style_probplot(qax, point_color=qq_colors[j % len(qq_colors)], line_color=SPACE_COLORS["magenta"])
+    qax.set_title(f"QQ-plot: {name}")
+    qax.set_xlabel("квантили N(0,1)")
+    qax.set_ylabel("выборочные квантили, смещение, доля радиуса" if name == "исходные" else "выборочные квантили (безразмерные)")
+plt.tight_layout()
+plt.show()
+</code></pre></details></section>
+<section class="cell prose-cell" id="cell-116"><h2 class="level-subsection toc-heading" id="heading-116">01.4.9. Проверка оценок на выборках</h2>
+</section>
+<section class="cell code-cell" id="cell-117"><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th>оценка</th>
+<th>дисперсия</th>
+<th>медиана</th>
+<th>среднее</th>
+</tr>
+<tr>
+<th>n</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>10</th>
+<td>0.001908</td>
+<td>0.048974</td>
+<td>0.041685</td>
+</tr>
+<tr>
+<th>16</th>
+<td>0.001630</td>
+<td>0.038116</td>
+<td>0.027343</td>
+</tr>
+<tr>
+<th>28</th>
+<td>0.001483</td>
+<td>0.031888</td>
+<td>0.023019</td>
+</tr>
+<tr>
+<th>48</th>
+<td>0.000927</td>
+<td>0.022543</td>
+<td>0.015251</td>
+</tr>
+<tr>
+<th>82</th>
+<td>0.000741</td>
+<td>0.015445</td>
+<td>0.015263</td>
+</tr>
+<tr>
+<th>139</th>
+<td>0.000503</td>
+<td>0.012143</td>
+<td>0.009408</td>
+</tr>
+<tr>
+<th>235</th>
+<td>0.000530</td>
+<td>0.010673</td>
+<td>0.008591</td>
+</tr>
+<tr>
+<th>398</th>
+<td>0.000334</td>
+<td>0.008705</td>
+<td>0.006139</td>
+</tr>
+<tr>
+<th>674</th>
+<td>0.000270</td>
+<td>0.005859</td>
+<td>0.004618</td>
+</tr>
+<tr>
+<th>1142</th>
+<td>0.000201</td>
+<td>0.004491</td>
+<td>0.003775</td>
+</tr>
+<tr>
+<th>1933</th>
+<td>0.000151</td>
+<td>0.003617</td>
+<td>0.003051</td>
+</tr>
+<tr>
+<th>3273</th>
+<td>0.000120</td>
+<td>0.003040</td>
+<td>0.001999</td>
+</tr>
+<tr>
+<th>5541</th>
+<td>0.000100</td>
+<td>0.002746</td>
+<td>0.001626</td>
+</tr>
+<tr>
+<th>9380</th>
+<td>0.000069</td>
+<td>0.001480</td>
+<td>0.001241</td>
+</tr>
+<tr>
+<th>15881</th>
+<td>0.000051</td>
+<td>0.001306</td>
+<td>0.000897</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# выборки с возвращением из всей совокупности, N_REP повторов на каждый размер
+sizes = np.unique(np.logspace(1, np.log10(N), 15).astype(int))
+true_vals = {"среднее": xv.mean(), "дисперсия": xv.var(ddof=1), "медиана": np.median(xv)}
+
+rows = []
+for n in sizes:
+    est = np.array([[s.mean(), s.var(ddof=1), np.median(s)]
+                    for s in (rng.choice(xv, n, replace=True) for _ in range(N_REP))])
+    for j, name in enumerate(true_vals):
+        q05, q50, q95 = np.quantile(est[:, j], [0.05, 0.5, 0.95])
+        rows.append({"n": n, "оценка": name, "q05": q05, "медиана": q50, "q95": q95})
+cons = pd.DataFrame(rows)
+cons["ширина 5-95%"] = cons["q95"] - cons["q05"]
+cons.pivot(index="n", columns="оценка", values="ширина 5-95%").round(6)</code></pre></details></section>
+<section class="cell prose-cell" id="cell-118"><h2 class="level-subsection toc-heading" id="heading-118">01.4.10. Состоятельность оценок</h2>
+</section>
+<section class="cell code-cell" id="cell-119"><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-119-0.png" type="button"><img alt="График исследования" loading="lazy" src="assets/charts/chart-119-0.png"/><span class="expand-label">↗</span></button><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+units = {"среднее": "доля радиуса", "дисперсия": "доля радиуса²", "медиана": "доля радиуса"}
+fig, axes = plt.subplots(1, 3, figsize=(16, 4.5))
+for ax, name in zip(axes, true_vals):
+    cc = cons[cons["оценка"] == name]
+    ax.fill_between(cc["n"], cc["q05"], cc["q95"], alpha=0.3, label="5-95% оценок")
+    ax.semilogx(cc["n"], cc["медиана"], "o-", ms=3, label="медиана оценок")
+    ax.axhline(true_vals[name], color=SPACE_COLORS["gold"], ls="--", lw=1.5, label="генеральное значение")
+    ax.set_xlabel("размер выборки n")
+    ax.set_ylabel(f"{name}, {units[name]}")
+    ax.set_title(f"Состоятельность: {name}")
+    ax.legend()
+plt.tight_layout()
+plt.show()</code></pre></details></section>
+<section class="cell code-cell" id="cell-120"><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-120-0.png"><img alt="График исследования" loading="lazy" src="assets/charts/chart-120-0.png"/><span class="expand-label">↗</span></button><pre class="output-text">среднее     -0.5008
+дисперсия   -0.4953
+медиана     -0.4874
+Name: наклон, dtype: float64</pre><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+fig, ax = plt.subplots(figsize=(7, 5))
+slopes = {}
+for name in true_vals:
+    cc = cons[(cons["оценка"] == name) &amp; (cons["ширина 5-95%"] &gt; 0)]
+    slopes[name] = np.polyfit(np.log10(cc["n"]), np.log10(cc["ширина 5-95%"]), 1)[0]
+    ax.loglog(cc["n"], cc["ширина 5-95%"], "o-", ms=3, label=f"{name}, наклон {slopes[name]:.3f}")
+ax.set_xlabel("размер выборки n")
+ax.set_ylabel("ширина полосы 5-95%, ед. оценки")
+ax.set_title("Скорость сужения разброса оценок")
+ax.legend()
+plt.show()
+pd.Series(slopes, name="наклон").round(4)</code></pre></details></section>
+<section class="cell prose-cell" id="cell-121"><h2 class="level-subsection toc-heading" id="heading-121">01.4.11. Выборки с возвращением и без</h2>
+</section>
+<section class="cell code-cell" id="cell-122"><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>генеральная</th>
+<th>с возвращением</th>
+<th>без возвращения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>n</th>
+<td>15881.00000</td>
+<td>1000.00000</td>
+<td>1000.00000</td>
+</tr>
+<tr>
+<th>среднее</th>
+<td>0.07045</td>
+<td>0.07078</td>
+<td>0.07141</td>
+</tr>
+<tr>
+<th>дисперсия</th>
+<td>0.00138</td>
+<td>0.00133</td>
+<td>0.00134</td>
+</tr>
+<tr>
+<th>q05</th>
+<td>0.01802</td>
+<td>0.01735</td>
+<td>0.01927</td>
+</tr>
+<tr>
+<th>q25</th>
+<td>0.04246</td>
+<td>0.04347</td>
+<td>0.04432</td>
+</tr>
+<tr>
+<th>медиана</th>
+<td>0.06608</td>
+<td>0.06828</td>
+<td>0.06634</td>
+</tr>
+<tr>
+<th>q75</th>
+<td>0.09373</td>
+<td>0.09291</td>
+<td>0.09542</td>
+</tr>
+<tr>
+<th>q95</th>
+<td>0.13835</td>
+<td>0.13792</td>
+<td>0.13919</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+s_with = x.sample(N_SAMPLE, replace=True, random_state=SEED)
+s_without = x.sample(N_SAMPLE, replace=False, random_state=SEED)
+
+def summary(s):
+    return pd.Series({"n": len(s), "среднее": s.mean(), "дисперсия": s.var(ddof=1),
+                      "q05": s.quantile(0.05), "q25": s.quantile(0.25), "медиана": s.median(),
+                      "q75": s.quantile(0.75), "q95": s.quantile(0.95)})
+
+pd.DataFrame({"генеральная": summary(x), "с возвращением": summary(s_with),
+              "без возвращения": summary(s_without)}).round(5)</code></pre></details></section>
+<section class="cell code-cell" id="cell-123"><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-123-0.png"><img alt="График исследования" loading="lazy" src="assets/charts/chart-123-0.png"/><span class="expand-label">↗</span></button><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+bins = np.linspace(0, xv.max(), 50)
+fig, ax = plt.subplots(figsize=(10, 4.5))
+ax.hist(x, bins=bins, density=True, histtype="stepfilled", alpha=0.22, color=SPACE_COLORS["cyan"], label="генеральная")
+ax.hist(s_with, bins=bins, density=True, histtype="step", lw=1.5, color=SPACE_COLORS["violet"], label="с возвращением")
+ax.hist(s_without, bins=bins, density=True, histtype="step", lw=1.5, color=SPACE_COLORS["magenta"], label="без возвращения")
+ax.set_xlabel("r_def, доля радиуса")
+ax.set_ylabel("плотность вероятности, 1/доля радиуса")
+ax.set_title(f"Выборки n = {N_SAMPLE} и генеральная совокупность")
+ax.legend()
+style_axis(ax)
+plt.show()
+</code></pre></details></section>
+<section class="cell code-cell" id="cell-124"><pre class="output-text">KS с возвращением vs генеральная: D = 0.0256, p = 0.5593
+KS без возвращения vs дополнение: D = 0.0272, p = 0.4849</pre><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>генеральная</th>
+<th>с возвращением</th>
+<th>без возвращения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0.05</th>
+<td>0.01802</td>
+<td>0.01735</td>
+<td>0.01927</td>
+</tr>
+<tr>
+<th>0.25</th>
+<td>0.04246</td>
+<td>0.04347</td>
+<td>0.04432</td>
+</tr>
+<tr>
+<th>0.50</th>
+<td>0.06608</td>
+<td>0.06828</td>
+<td>0.06634</td>
+</tr>
+<tr>
+<th>0.75</th>
+<td>0.09373</td>
+<td>0.09291</td>
+<td>0.09542</td>
+</tr>
+<tr>
+<th>0.95</th>
+<td>0.13835</td>
+<td>0.13792</td>
+<td>0.13919</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+complement = x.drop(s_without.index)
+for name, s, ref_s in [("с возвращением vs генеральная", s_with, x),
+                       ("без возвращения vs дополнение", s_without, complement)]:
+    r = stats.ks_2samp(s, ref_s)
+    print(f"KS {name}: D = {r.statistic:.4f}, p = {r.pvalue:.4f}")
+
+# квантили выборок против генеральной
+qs = [0.05, 0.25, 0.5, 0.75, 0.95]
+pd.DataFrame({"генеральная": x.quantile(qs), "с возвращением": s_with.quantile(qs),
+              "без возвращения": s_without.quantile(qs)}).round(5)</code></pre></details></section>
+<section class="cell code-cell" id="cell-125"><button aria-label="Увеличить график" class="chart-expand" data-img="assets/charts/chart-125-0.png" type="button"><img alt="График исследования" loading="lazy" src="assets/charts/chart-125-0.png"/><span class="expand-label">↗</span></button><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>n</th>
+<th>n/N</th>
+<th>sd с возвр.</th>
+<th>sd без возвр.</th>
+<th>теория sigma/sqrt(n)</th>
+<th>теория с FPC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>100</td>
+<td>0.006297</td>
+<td>0.003609</td>
+<td>0.003633</td>
+<td>0.003710</td>
+<td>0.003698</td>
+</tr>
+<tr>
+<th>1</th>
+<td>500</td>
+<td>0.031484</td>
+<td>0.001784</td>
+<td>0.001527</td>
+<td>0.001659</td>
+<td>0.001633</td>
+</tr>
+<tr>
+<th>2</th>
+<td>1000</td>
+<td>0.062968</td>
+<td>0.001247</td>
+<td>0.001151</td>
+<td>0.001173</td>
+<td>0.001136</td>
+</tr>
+<tr>
+<th>3</th>
+<td>3000</td>
+<td>0.188905</td>
+<td>0.000696</td>
+<td>0.000611</td>
+<td>0.000677</td>
+<td>0.000610</td>
+</tr>
+<tr>
+<th>4</th>
+<td>6000</td>
+<td>0.377810</td>
+<td>0.000476</td>
+<td>0.000361</td>
+<td>0.000479</td>
+<td>0.000378</td>
+</tr>
+<tr>
+<th>5</th>
+<td>10000</td>
+<td>0.629683</td>
+<td>0.000355</td>
+<td>0.000228</td>
+<td>0.000371</td>
+<td>0.000226</td>
+</tr>
+<tr>
+<th>6</th>
+<td>13000</td>
+<td>0.818588</td>
+<td>0.000323</td>
+<td>0.000143</td>
+<td>0.000325</td>
+<td>0.000139</td>
+</tr>
+<tr>
+<th>7</th>
+<td>15000</td>
+<td>0.944525</td>
+<td>0.000297</td>
+<td>0.000071</td>
+<td>0.000303</td>
+<td>0.000071</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# Монте-Карло: sd выборочного среднего с возвращением и без против теории
+sigma = xv.std(ddof=0)
+n_grid = np.array([100, 500, 1000, 3000, 6000, 10000, 13000, 15000])
+mc = []
+for n in n_grid:
+    m_with = [rng.choice(xv, n, replace=True).mean() for _ in range(N_MC)]
+    m_without = [rng.choice(xv, n, replace=False).mean() for _ in range(N_MC)]
+    mc.append({"n": n, "n/N": n / N, "sd с возвр.": np.std(m_with, ddof=1),
+               "sd без возвр.": np.std(m_without, ddof=1),
+               "теория sigma/sqrt(n)": sigma / np.sqrt(n),
+               "теория с FPC": sigma / np.sqrt(n) * np.sqrt((N - n) / (N - 1))})
+mc = pd.DataFrame(mc)
+
+fig, ax = plt.subplots(figsize=(8, 5))
+ax.loglog(mc["n"], mc["sd с возвр."], "o", label="эмпирически, с возвращением")
+ax.loglog(mc["n"], mc["sd без возвр."], "s", label="эмпирически, без возвращения")
+nn = np.linspace(n_grid.min(), n_grid.max(), 400)
+ax.loglog(nn, sigma / np.sqrt(nn), "-", lw=1.6, color=SPACE_COLORS["gold"], label=r"$\sigma/\sqrt{n}$")
+ax.loglog(nn, sigma / np.sqrt(nn) * np.sqrt((N - nn) / (N - 1)), "--", lw=1.6, color=SPACE_COLORS["gold"],
+          label=r"$\sigma/\sqrt{n}\cdot\sqrt{(N-n)/(N-1)}$")
+ax.set_xlabel("размер выборки n")
+ax.set_ylabel("sd выборочного среднего, доля радиуса")
+ax.set_title(f"Выборки с возвращением и без (N = {N})")
+ax.legend()
+plt.show()
+mc.round(6)</code></pre></details></section>
+<section class="cell prose-cell" id="cell-126"><h2 class="level-subsection toc-heading" id="heading-126">01.4.12. Проверка гипотез</h2>
+<p>По графикам видно, где расходятся наблюдаемые и теоретические квантили. Теперь проверим, насколько заметны эти расхождения по формальным критериям.</p>
+</section>
+<section class="cell code-cell" id="cell-127"><pre class="output-text">подвыборка N_GOF = 2000, n_mc_samples = 200</pre><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>KS D (вся выборка)</th>
+<th>KS p наивный</th>
+<th>KS стат. (подвыборка)</th>
+<th>KS p Монте-Карло</th>
+<th>AD стат. (подвыборка)</th>
+<th>AD p Монте-Карло</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>бета</th>
+<td>0.028515</td>
+<td>1.188875e-11</td>
+<td>0.026107</td>
+<td>0.004975</td>
+<td>2.586944</td>
+<td>0.004975</td>
+</tr>
+<tr>
+<th>Рэлей</th>
+<td>0.005671</td>
+<td>6.844302e-01</td>
+<td>0.019382</td>
+<td>0.253731</td>
+<td>0.698266</td>
+<td>0.298507</td>
+</tr>
+<tr>
+<th>Вейбулл</th>
+<td>0.003374</td>
+<td>9.933423e-01</td>
+<td>0.010898</td>
+<td>0.865672</td>
+<td>0.333428</td>
+<td>0.487562</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# обычный KS с подогнанными параметрами и goodness_of_fit (Монте-Карло) на подвыборке
+sub = rng.choice(xv, N_GOF, replace=False)
+known = {"бета": {"loc": 0, "scale": 1}, "Рэлей": {"loc": 0}, "Вейбулл": {"loc": 0}}
+gof_rows = []
+for name, f in fits.items():
+    data_full = f["data"]
+    data_sub = np.clip(sub, EPS, 1 - EPS) if name == "бета" else sub
+    ks_naive = stats.kstest(data_full, f["dist"].cdf, args=f["args"])
+    row = {"KS D (вся выборка)": ks_naive.statistic, "KS p наивный": ks_naive.pvalue}
+    for stat in ["ks", "ad"]:
+        res = stats.goodness_of_fit(f["dist"], data_sub, known_params=known[name], statistic=stat,
+                                    n_mc_samples=B_GOF, rng=rng)
+        row[f"{stat.upper()} стат. (подвыборка)"] = res.statistic
+        row[f"{stat.upper()} p Монте-Карло"] = res.pvalue
+    gof_rows.append(pd.Series(row, name=name))
+print(f"подвыборка N_GOF = {N_GOF}, n_mc_samples = {B_GOF}")
+pd.DataFrame(gof_rows)</code></pre></details></section>
+<section class="cell code-cell" id="cell-128"><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>chi2</th>
+<th>df</th>
+<th>p-value</th>
+<th>min O</th>
+<th>max O</th>
+</tr>
+<tr>
+<th>модель</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>бета</th>
+<td>184.228890</td>
+<td>17</td>
+<td>4.139126e-30</td>
+<td>608</td>
+<td>934</td>
+</tr>
+<tr>
+<th>Рэлей</th>
+<td>12.083559</td>
+<td>18</td>
+<td>8.428935e-01</td>
+<td>746</td>
+<td>829</td>
+</tr>
+<tr>
+<th>Вейбулл</th>
+<td>9.315471</td>
+<td>17</td>
+<td>9.298418e-01</td>
+<td>757</td>
+<td>830</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# chi2 согласия по равновероятным интервалам, ddof = число параметров
+chi_rows = []
+for name, f in fits.items():
+    edges = f["frozen"].ppf(np.linspace(0, 1, K_CHI2 + 1))
+    O = np.histogram(f["data"], bins=edges)[0]
+    E = np.full(K_CHI2, len(f["data"]) / K_CHI2)
+    stat, p = stats.chisquare(O, E, ddof=f["k"])
+    chi_rows.append({"модель": name, "chi2": stat, "df": K_CHI2 - 1 - f["k"], "p-value": p,
+                     "min O": O.min(), "max O": O.max()})
+chi_tab = pd.DataFrame(chi_rows).set_index("модель")
+chi_tab</code></pre></details></section>
+<section class="cell code-cell" id="cell-129"><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>n Training</th>
+<th>n Test</th>
+<th>медиана Training</th>
+<th>медиана Test</th>
+<th>U</th>
+<th>p-value</th>
+<th>U/(n1*n2)</th>
+</tr>
+<tr>
+<th>величина</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>r_def</th>
+<td>13005</td>
+<td>2876</td>
+<td>0.065133</td>
+<td>0.071379</td>
+<td>17033501.5</td>
+<td>6.602348e-14</td>
+<td>0.455412</td>
+</tr>
+<tr>
+<th>z = r_def*2*sqrt(n_defect)</th>
+<td>13005</td>
+<td>2876</td>
+<td>1.294930</td>
+<td>1.350867</td>
+<td>17950675.0</td>
+<td>7.428864e-04</td>
+<td>0.479934</td>
+</tr>
+<tr>
+<th>n_defect</th>
+<td>13005</td>
+<td>2876</td>
+<td>99.000000</td>
+<td>90.000000</td>
+<td>24702768.5</td>
+<td>2.618588e-160</td>
+<td>0.660460</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+# Манн-Уитни Training против Test: r_def и нормированный центроид z
+lab = df.loc[x.index, "trianTestLabel"].to_numpy()
+mw_rows = []
+for name, vals in [("r_def", xv), ("z = r_def*2*sqrt(n_defect)", z),
+                   ("n_defect", df.loc[x.index, "n_defect"].to_numpy())]:
+    tr, te = vals[lab == "Training"], vals[lab == "Test"]
+    r = stats.mannwhitneyu(tr, te, alternative="two-sided", method="asymptotic")
+    mw_rows.append({"величина": name, "n Training": len(tr), "n Test": len(te),
+                    "медиана Training": np.median(tr), "медиана Test": np.median(te),
+                    "U": r.statistic, "p-value": r.pvalue, "U/(n1*n2)": r.statistic / (len(tr) * len(te))})
+mw_tab = pd.DataFrame(mw_rows).set_index("величина")
+mw_tab</code></pre></details></section>
+<section class="cell prose-cell" id="cell-130"><h2 class="level-subsection toc-heading" id="heading-130">01.4.13. Сводная таблица результатов</h2>
+</section>
+<section class="cell code-cell" id="cell-131"><div class="table-wrap"><table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>значение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>пластин (n)</th>
+<td>15881</td>
+</tr>
+<tr>
+<th>доля NaN</th>
+<td>0</td>
+</tr>
+<tr>
+<th>лотов</th>
+<td>715</td>
+</tr>
+<tr>
+<th>среднее r_def</th>
+<td>0.0704534</td>
+</tr>
+<tr>
+<th>дисперсия r_def</th>
+<td>0.00137648</td>
+</tr>
+<tr>
+<th>медиана r_def</th>
+<td>0.0660767</td>
+</tr>
+<tr>
+<th>асимметрия</th>
+<td>0.660484</td>
+</tr>
+<tr>
+<th>эксцесс</th>
+<td>0.341657</td>
+</tr>
+<tr>
+<th>внутрилотовая дисперсия</th>
+<td>0.00133402</td>
+</tr>
+<tr>
+<th>межлотовая дисперсия</th>
+<td>0.000102068</td>
+</tr>
+<tr>
+<th>ICC</th>
+<td>0.0710741</td>
+</tr>
+<tr>
+<th>бета a</th>
+<td>2.93894</td>
+</tr>
+<tr>
+<th>бета b</th>
+<td>38.8312</td>
+</tr>
+<tr>
+<th>Рэлей sigma</th>
+<td>0.0563031</td>
+</tr>
+<tr>
+<th>Вейбулл c</th>
+<td>1.98575</td>
+</tr>
+<tr>
+<th>Вейбулл lambda</th>
+<td>0.0795039</td>
+</tr>
+<tr>
+<th>AIC бета</th>
+<td>-61063.9</td>
+</tr>
+<tr>
+<th>AIC Рэлей</th>
+<td>-61369.3</td>
+</tr>
+<tr>
+<th>AIC Вейбулл</th>
+<td>-61368.7</td>
+</tr>
+<tr>
+<th>лучшая по AIC</th>
+<td>Рэлей</td>
+</tr>
+<tr>
+<th>LR Рэлей vs Вейбулл</th>
+<td>1.34965</td>
+</tr>
+<tr>
+<th>p LR</th>
+<td>0.245339</td>
+</tr>
+<tr>
+<th>теория sigma 1/(2*sqrt(медиана k))</th>
+<td>0.0507673</td>
+</tr>
+<tr>
+<th>z: sigma Рэлея</th>
+<td>1.10019</td>
+</tr>
+<tr>
+<th>Бокс-Кокс lambda</th>
+<td>0.518727</td>
+</tr>
+<tr>
+<th>chi2 (Рэлей)</th>
+<td>12.0836</td>
+</tr>
+<tr>
+<th>p chi2 (Рэлей)</th>
+<td>0.842894</td>
+</tr>
+<tr>
+<th>Манн-Уитни p (r_def)</th>
+<td>6.60235e-14</td>
+</tr>
+<tr>
+<th>Манн-Уитни U/(n1*n2) (r_def)</th>
+<td>0.455412</td>
+</tr>
+</tbody>
+</table></div><details class="code-details"><summary>Показать код <span>⌄</span></summary><pre><code># @title Показать код
+best = fit_table["AIC"].astype(float).idxmin()
+summary_tab = pd.Series({
+    "пластин (n)": N,
+    "доля NaN": x_all.isna().mean(),
+    "лотов": df["lotName"].nunique(),
+    "среднее r_def": xv.mean(),
+    "дисперсия r_def": xv.var(ddof=1),
+    "медиана r_def": np.median(xv),
+    "асимметрия": stats.skew(xv),
+    "эксцесс": stats.kurtosis(xv),
+    "внутрилотовая дисперсия": var_within,
+    "межлотовая дисперсия": var_between,
+    "ICC": icc,
+    "бета a": a_hat, "бета b": b_hat,
+    "Рэлей sigma": s_ray,
+    "Вейбулл c": c_wb, "Вейбулл lambda": s_wb,
+    "AIC бета": fit_table.loc["бета", "AIC"],
+    "AIC Рэлей": fit_table.loc["Рэлей", "AIC"],
+    "AIC Вейбулл": fit_table.loc["Вейбулл", "AIC"],
+    "лучшая по AIC": best,
+    "LR Рэлей vs Вейбулл": lr_rw, "p LR": p_rw,
+    "теория sigma 1/(2*sqrt(медиана k))": 1 / (2 * np.sqrt(kd.median())),
+    "z: sigma Рэлея": s_z,
+    "Бокс-Кокс lambda": lam_bc,
+    f"chi2 ({best})": chi_tab.loc[best, "chi2"],
+    f"p chi2 ({best})": chi_tab.loc[best, "p-value"],
+    "Манн-Уитни p (r_def)": mw_tab.loc["r_def", "p-value"],
+    "Манн-Уитни U/(n1*n2) (r_def)": mw_tab.loc["r_def", "U/(n1*n2)"],
+}, dtype=object)
+summary_tab.map(lambda v: f"{v:.6g}" if isinstance(v, (float, np.floating)) else v).to_frame("значение")</code></pre></details></section>
+<section class="cell prose-cell" id="cell-132"><h2 class="level-subsection toc-heading" id="heading-132">01.4.14. Выводы</h2>
+</section>
+<section class="cell prose-cell" id="cell-133"><p>На 15 881 пластине медианное смещение центра дефектов составило 6,61% нормирующего радиуса. По AIC распределение Рэлея немного опередило распределение Вейбулла. Критерий согласия χ² для модели Рэлея дал p ≈ 0,843, поэтому на уровне 5% гипотезу о согласии не отвергаем.</p>
+</section></article></div><nav aria-label="Переходы между разделами" class="page-direction"><a class="step-link step-prev" href="dependence.html"><span class="step-meta">← Назад</span><strong>01.3. Связь числа дефектов в центре и у края</strong></a><a class="step-link step-next" href="results.html"><span class="step-meta">Далее →</span><strong>01.5. Выводы первого спринта</strong></a></nav></main><button aria-label="Наверх" class="back-to-top" type="button">↑</button><footer class="site-footer"><a class="brand" href="index.html">APPSTAT<span>✦</span></a><span>LAB 01 · WM-811K</span><a href="sources.html">Источники ↗</a></footer><div aria-label="График" aria-modal="true" class="lightbox" hidden="" role="dialog">
+<div class="lightbox-dialog"><div class="lightbox-toolbar"><span>График</span><div class="lightbox-actions">
+<button aria-label="Уменьшить график" class="zoom-out" type="button">−</button><output class="zoom-label">100%</output>
+<button aria-label="Увеличить график" class="zoom-in" type="button">+</button>
+<button aria-label="Закрыть график" class="lightbox-close" type="button">×</button></div></div>
+<div class="lightbox-viewport"><img alt="Увеличенный график"/></div></div></div><script>window.MathJax={tex:{inlineMath:[["\\(","\\)"],["$","$"]],displayMath:[["\\[","\\]"]] },options:{skipHtmlTags:["script","noscript","style","textarea","pre","code"]}};</script><script async="" src="assets/vendor/mathjax/tex-svg.js"></script><script src="assets/app.js"></script></body></html>
